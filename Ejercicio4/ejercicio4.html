@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Ejercicio 4</title>
+    <meta charset="UTF-8">
+    <style>
+        input:valid{
+            background-color: white;
+        }
+
+        input:invalid {
+            background-color: salmon;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Iniciar sesión</h1>
+    <form>
+        <label for="email">Email: </label>
+        <input type="email" placeholder="Email" id="email" name="email" required>
+
+        <label for="contrasena">Contraseña: </label>
+        <input type="password" name="contrasena" id="contrasena" placeholder="Contraseña" pattern=".{10,}"
+            title="La contraseña debe tener al menos 10 caracteres" required>
+        <a href="">Recuperar contraseña</a>
+
+        <button type="submit" name="btnIniciarSesion">Iniciar sesión</button>
+    </form>
+</body>
+
+</html>
