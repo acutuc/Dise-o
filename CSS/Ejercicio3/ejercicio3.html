@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Ejercicio 3</title>
+        <meta charset="UTF-8">
+        <style>
+            i+b{color:red}
+            #estilo{color: black}
+            .nivel1{color: green}  
+            .nivel2{color:blue}
+            ul ul .nivel2{font-size:x-small}
+            ul ul li {font-size:small; color:purple}
+        </style>
+    </head>
+    <body>
+        <h1>
+            <p>
+                <i>Título</i>: <b>Anidamiento y agrupamiento</b> de selectores
+            </p>
+        </h1>
+        <ul>
+            <!--Los ID prevalecen sobre las "class". Si una etiqueta tiene id y class, y ambas tienen estilo asignado, el ID es el que se aplica.-->
+            <li id="estilo" class="nivel1" >Agrupamiento</li>
+            <li class="nivel2">Anidamiento</li>
+            <ul>
+                <li class="nivel2">Anidamiento de hijos</li>
+                <li class="nivel2">Anidamiento de adyacentes</li>
+                <li>Anidamiento común</li>
+            </ul>
+        </ul>
+    </body>
+</html>
