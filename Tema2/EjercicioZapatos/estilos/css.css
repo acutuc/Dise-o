@@ -2,9 +2,9 @@
     box-sizing: border-box;
 }
 
-section#ofertas > article.item-oferta{
-    border: 1px solid black;
-    border-radius: 5%;
+div#contenido{
+    display: flex;
+    flex-direction: column;
 }
 
 section#ofertas{
@@ -13,9 +13,12 @@ section#ofertas{
 }
 
 section#ofertas > article.item-oferta{
-    margin: 1em 0;
     display: flex;
     flex-direction: column;
+    margin: 1em 0;
+    border: 1px solid black;
+    border-radius: 5%;
+    align-items: center;
 }
 
 section#ofertas > article.item-oferta > h3{
@@ -25,12 +28,13 @@ section#ofertas > article.item-oferta > h3{
 
 section#ofertas > article.item-oferta > img{
     order: 2;
-    height: 100%;
+    align-self: center;
 }
 
 section#ofertas > article.item-oferta > p{
     order: 3;
     align-self: center;
+    margin: 1em;
 }
 
 section#ofertas > article.item-oferta > ul{
@@ -41,25 +45,30 @@ section#ofertas > article.item-oferta > button.boton-cesta{
     order: 5;
     width: 60%;
     align-self: center;
-    border-color: grey;
+    border: 0.5px solid green;
     background-color: rgb(211, 148, 0);
+    box-shadow: 0 3px 4px green;
     color:white;
     height: 3em;
     margin: 2em;
 }
 
 @media all and (min-width: 600px) {
-    section {
-        flex-flow: row;
+    div#contenido{
+        display:flex;
+        flex-direction: column;
     }
-
-    section>article {
-        flex: 2;
-        margin: 0 1em;
+    section#ofertas{
+        display: flex;
+        flex-direction: row;
     }
-
-    section>article {
-        flex: 1;
-        margin: 0 1em;
+    section#ofertas > article.item-oferta{
+        width: 20em;
+        margin: 0.5em;
+    }
+    section#ofertas > article.item-oferta > p{
+        align-self: center;
+        margin: 1em;
     }
 }
+  
