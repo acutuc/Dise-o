@@ -1,0 +1,65 @@
+*{
+    box-sizing: border-box;
+}
+
+section#ofertas > article.item-oferta{
+    border: 1px solid black;
+    border-radius: 5%;
+}
+
+section#ofertas{
+    display: flex;
+    flex-direction: column;
+}
+
+section#ofertas > article.item-oferta{
+    margin: 1em 0;
+    display: flex;
+    flex-direction: column;
+}
+
+section#ofertas > article.item-oferta > h3{
+    text-align: center;
+    order: 1;
+}
+
+section#ofertas > article.item-oferta > img{
+    order: 2;
+    height: 100%;
+}
+
+section#ofertas > article.item-oferta > p{
+    order: 3;
+    align-self: center;
+}
+
+section#ofertas > article.item-oferta > ul{
+    order: 4;
+}
+
+section#ofertas > article.item-oferta > button.boton-cesta{
+    order: 5;
+    width: 60%;
+    align-self: center;
+    border-color: grey;
+    background-color: rgb(211, 148, 0);
+    color:white;
+    height: 3em;
+    margin: 2em;
+}
+
+@media all and (min-width: 600px) {
+    section {
+        flex-flow: row;
+    }
+
+    section>article {
+        flex: 2;
+        margin: 0 1em;
+    }
+
+    section>article {
+        flex: 1;
+        margin: 0 1em;
+    }
+}
