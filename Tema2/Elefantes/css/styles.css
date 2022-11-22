@@ -128,21 +128,45 @@ div#content main section article.news-art p{
 
 @media all and (min-width: 800px) {
   section#principal > article.news-art{
-    flex-direction: row;
+    height: 25rem;
+    flex-direction: column;
+    flex-wrap: wrap;
     align-items: flex-start;
   }
 
-  article.news-art > img{
-    width: 50%;
-  }
-
   section#principal > article.news-art > p{
-    width:50%;
+    margin-top: 5em;
+    margin-right: 25em;
   }
 }
 
 @media all and (min-width: 1200px) {
-  body{
-    background-color: black;
+
+  nav ul{
+    padding-left: 0;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
   }
+  #hamburger{
+    display:none;
+  }
+
+  nav#main-menu > label{
+    display:none;
+  }
+
+  div#content > main > section#principal{
+    flex-flow: row wrap;
+    align-items: start;
+  }
+
+  div#content > main > section#principal > article#primerElemento{
+    width: 100%;    
+  }
+
+  div#content > main > section#principal > article.news-art{
+    width:50%;
+  }
+
 }
