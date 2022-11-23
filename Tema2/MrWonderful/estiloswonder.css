@@ -106,7 +106,7 @@ main > article.item{
 	display: flex;
 	flex-flow: column wrap;
 	align-items: center;
-	width:40%;
+	width:43%;
 	margin:1em;
 	margin-top:auto;
 }
@@ -158,17 +158,16 @@ footer{
 }
 
 /*El menú adicional es flexible y va en segunda posición*/
-footer nav{
+footer > nav{
 	display:flex;
 	flex-direction: column;
 	align-items: center;
 	order: 2;
 }
-footer nav ul#menu-adicional{
+footer > nav > ul#menu-adicional{
 	display:flex;
 	flex-direction: column;
 	align-items: center;
-	order: 2;
 }
 
 /*El menú social hay que hacerlo flexible*/
@@ -198,6 +197,102 @@ footer > small{
 }
 
 /*VERSIÓN DE ESCRITORIO*/
+@media all and (min-width: 1200px) {
+	header{
+		flex-flow: row wrap;
+		justify-content: end;
+	}
+	
+	header > nav#menu-principal > label > span{
+		display:none;
+	}
+
+	#hamburguesa:checked~ul#menu{
+		display:flex;
+	  }
+
+	header > nav#menu-principal > ul#menu{
+		flex-direction: row;
+		justify-content: space-between;
+		width:100%;
+		padding: 0.3rem 0;
+		margin:0;
+		border-bottom: 1px solid grey;
+	}
+
+	header > nav#menu-principal{
+		width:100%;
+	}
+
+	header > nav#menu-principal > ul#menu > li{
+		margin:0.5rem;
+	}
+
+	header > nav#menu-principal{
+		order:5;
+		margin:1rem;
+	}
+
+	header > a#logo{
+		order: 4;
+		margin:0.5em;
+		flex:100%;
+	
+		font-size: 1.4rem;
+	}
+	
+	header > nav#search{
+		order:1;
+		margin:0 2rem;
+		font-size: 1.4rem;
+	}
+
+	header > nav#login{
+		order: 2;
+		margin:0 2rem;
+		font-size: 1.4rem;
+	}
+
+	header > nav#bag{
+		order:3;
+		margin:0 2rem;
+		padding-right: 0.5rem;
+		font-size: 1.4rem;
+	}
+
+	main{
+		display:flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+	}
+
+
+	main > article.item{
+		flex: 0 0 25%;
+		align-items: center;
+	}
+
+
+	footer{
+		display:flex;
+		flex-flow: row wrap;
+	}
+
+	footer > nav{
+		margin-top: 1rem;
+		display:flex;
+		width:50%;
+		flex-direction: column;
+		align-items: center;
+		order: 2;
+	}
+
+	footer > small{
+		text-align: center;
+		width:100%;
+		margin-bottom:0.5rem;
+	}
+  }
 /*En la cabecera va logo e iconos en la misma línea y debajo el menú*/
 /*Hay 4 artículos por fila*/
 /*La barra social y el menú adicional están uno al lado del otro*/
