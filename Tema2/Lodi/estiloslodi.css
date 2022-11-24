@@ -1,0 +1,71 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display:flex;
+    flex-wrap: wrap;
+}
+
+header{
+    display:flex;
+    width: 100%;
+    border: 1px solid black;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header > picture > img#logo{
+    width: 45%;
+}
+
+header > nav#menu-principal > input#menu-hamburger{
+    display:none;
+}
+
+header > nav#menu-principal > input#menu-hamburger:checked ~ ul#menu{
+    display:flex;
+    flex-direction: column;
+}
+
+header > nav#menu-principal > ul#menu{
+    display:none;
+}
+
+header > picture{
+    order: 3;
+    border:1px solid orange;
+    width:35%;
+    display:flex;
+    justify-content: center;
+}
+
+header > nav#menu-principal{
+    order: 1;
+    border:1px solid orange;
+    display:flex;
+    flex-direction: column;
+}
+
+header > nav#buscador{
+    order: 2;
+    border:1px solid orange;
+}
+
+header > nav#buscador > ul{
+    display:flex;
+    border:1px solid red;
+}
+
+header > nav#compra{
+    order: 4;
+    border:1px solid orange;
+}
+
+header > nav#buscador > ul > li, header > nav#compra > ul > li{
+    list-style: none;
+}
+
+main{
+    display: flex;
+}

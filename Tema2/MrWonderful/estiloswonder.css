@@ -106,7 +106,16 @@ main > article.item{
 	display: flex;
 	flex-flow: column wrap;
 	align-items: center;
-	width:43%;
+	width:40%;
+	margin:1em;
+}
+
+
+main > article.item > * {
+	margin-bottom:0.5rem;
+	width:100%;
+}
+/*El párrafo co	width:43%;
 	margin:1em;
 	margin-top:auto;
 }
@@ -293,8 +302,3 @@ footer > small{
 		margin-bottom:0.5rem;
 	}
   }
-/*En la cabecera va logo e iconos en la misma línea y debajo el menú*/
-/*Hay 4 artículos por fila*/
-/*La barra social y el menú adicional están uno al lado del otro*/
-
-
