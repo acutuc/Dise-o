@@ -1,0 +1,147 @@
+*{
+    box-sizing:border-box;
+}
+
+body{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*  HEADER  */
+header{
+    display:flex;
+    flex-wrap: wrap;
+    width:100%;
+}
+
+header > picture#logo-cabecera{
+    width:50%;
+    display:flex;
+    align-items: center;
+}
+
+header > picture#logo-cabecera > img{
+    width: 50%;
+    height: auto;
+}
+
+header > nav#bloque-iconos{
+    width:50%;
+}
+
+header > nav#bloque-iconos > ul{
+    list-style: none;
+    padding-left: 0;
+    display:flex;
+    justify-content: end;
+}
+
+header > nav#bloque-iconos > ul > li > a > i{
+    color: black;
+    font-size: 2rem;
+    margin-right: 1.5rem;
+}
+
+/*  menú  */
+header > nav#menu-principal{
+    display:flex;
+    flex-flow: row wrap;
+    background-color: black;
+    color:white;
+    width: 100%;
+    align-items: center;
+}
+
+header > nav#menu-principal > div#hamburguesa{
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header > nav#menu-principal > div#hamburguesa > span:first-child{
+    font-size: 2rem;
+}
+
+header > nav#menu-principal > div#hamburguesa > span{
+    margin-bottom: 0.2rem;
+    margin-top:auto;
+}
+
+header > nav#menu-principal > ul{
+    list-style:none;
+    display:none;
+}
+
+header > nav#menu-principal > ul > li > a{
+    color:white;
+}
+
+header > nav#menu-principal > ul > li > ul.submenu > li{
+    display:none;
+}
+
+/*  MAIN   */
+main{
+    width:100%;
+}
+main > section#form-contacto{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main > section#form-contacto > h2{
+    font-size: 2rem;
+}
+
+main > section#form-contacto > form#contacto{
+    display:flex;
+    flex-direction: column;
+    width: 50%;
+    
+}
+
+main > section#form-contacto > form#contacto > label{
+    display:none;
+}
+
+main > section#form-contacto > form#contacto > input{
+    margin-bottom: 0.5rem;
+    height: 2rem;
+}
+
+main > section#form-contacto > form#contacto > input:hover{
+    margin-bottom: 0.5rem;
+    height: 2rem;
+    background-color: black;
+    border:4px solid grey;
+}
+
+main > section#form-contacto > form#contacto > select#categoria{
+    margin-bottom:0.5rem;
+    background-color: rgb(204, 204, 204);
+    color:grey;
+    height: 2rem;
+}
+
+main > section#form-contacto > form#contacto > span#caracteres{
+    margin-bottom:0.5rem;
+    color:grey;
+    font-size: 0.9rem;
+    margin-left:0.3rem;
+}
+
+main > section#form-contacto > form#contacto > textarea#mensaje{
+    margin-bottom:0.5rem;
+}
+
+main > section#form-contacto > form#contacto > input:last-child{
+    background-color: black;
+    color:white;
+}
+
+/*  FOOTER  */
+footer{
+    display:none;
+}
