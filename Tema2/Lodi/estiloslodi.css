@@ -15,7 +15,8 @@ header{
 }
 
 header > picture > img#logo{
-    width: 45%;
+    width: 100px;
+    height:auto;
 }
 
 header > nav#menu-principal > input#menu-hamburger{
@@ -71,7 +72,7 @@ main{
 main > article.item{
     display:flex;
     flex-direction: column-reverse;
-    width:50%;
+    flex:50%;
 }
 
 main > article.item > a{

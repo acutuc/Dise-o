@@ -1,0 +1,41 @@
+*{
+    box-sizing:border-box;
+}
+
+main{   
+    display:flex;
+    flex-flow: column;
+}
+
+main > input{
+    border: none;
+    border-bottom: 1px solid rgb(228, 228, 228);
+    line-height: 30px;
+    padding-left:20px;
+}
+
+main > input::placeholder{
+    color:black;
+    font-size: 15px;
+}
+
+main > button{
+    margin-top:30px;
+    align-self: start;
+    border:none;
+    background-color: white;
+    cursor: pointer;
+}
+
+main > button#recuperar{
+    margin-left: 10px;
+}
+
+main > button#iniciar{
+    background-color: rgb(54, 54, 54);
+    color:burlywood;
+    padding: 20px 40px;
+    margin-top: 15px;
+    border-radius: 40px;
+    font-size: 15px;
+}

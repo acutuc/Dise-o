@@ -1,147 +1,191 @@
-*{
-    box-sizing:border-box;
+* {
+    box-sizing: border-box;
 }
 
-body{
+body {
     display: flex;
     flex-wrap: wrap;
 }
 
 /*  HEADER  */
-header{
-    display:flex;
+header {
+    display: flex;
     flex-wrap: wrap;
-    width:100%;
+    width: 100%;
 }
 
-header > picture#logo-cabecera{
-    width:50%;
-    display:flex;
+header>picture#logo-cabecera {
+    flex: 50%;
+    display: flex;
     align-items: center;
 }
 
-header > picture#logo-cabecera > img{
-    width: 50%;
+header>picture#logo-cabecera>img {
+    width: 130px;
     height: auto;
 }
 
-header > nav#bloque-iconos{
-    width:50%;
+header>nav#bloque-iconos {
+    flex: 50%;
 }
 
-header > nav#bloque-iconos > ul{
+header>nav#bloque-iconos>ul {
     list-style: none;
     padding-left: 0;
-    display:flex;
+    display: flex;
     justify-content: end;
 }
 
-header > nav#bloque-iconos > ul > li > a > i{
+header>nav#bloque-iconos>ul>li>a>i {
     color: black;
     font-size: 2rem;
     margin-right: 1.5rem;
 }
 
 /*  menú  */
-header > nav#menu-principal{
-    display:flex;
+header>nav#menu-principal {
+    display: flex;
     flex-flow: row wrap;
     background-color: black;
-    color:white;
-    width: 100%;
+    color: white;
+    flex: 100%;
     align-items: center;
 }
 
-header > nav#menu-principal > div#hamburguesa{
-    width:100%;
-    display:flex;
+header>nav#menu-principal>div#hamburguesa {
+    width: 100%;
+    display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-header > nav#menu-principal > div#hamburguesa > span:first-child{
+header>nav#menu-principal>div#hamburguesa>span:first-child {
     font-size: 2rem;
 }
 
-header > nav#menu-principal > div#hamburguesa > span{
+header>nav#menu-principal>div#hamburguesa>span {
     margin-bottom: 0.2rem;
-    margin-top:auto;
+    margin-top: auto;
 }
 
-header > nav#menu-principal > ul{
-    list-style:none;
-    display:none;
+header>nav#menu-principal>ul {
+    list-style: none;
+    display: none;
 }
 
-header > nav#menu-principal > ul > li > a{
-    color:white;
+header>nav#menu-principal>ul>li>a {
+    color: white;
 }
 
-header > nav#menu-principal > ul > li > ul.submenu > li{
-    display:none;
+header>nav#menu-principal>ul>li>ul.submenu>li {
+    display: none;
 }
 
 /*  MAIN   */
-main{
-    width:100%;
+main {
+    width: 100%;
 }
-main > section#form-contacto{
-    display:flex;
+
+main>section#form-contacto {
+    display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-main > section#form-contacto > h2{
+main>section#form-contacto>h2 {
     font-size: 2rem;
 }
 
-main > section#form-contacto > form#contacto{
-    display:flex;
+main>section#form-contacto>form#contacto {
+    display: flex;
     flex-direction: column;
     width: 50%;
-    
+
 }
 
-main > section#form-contacto > form#contacto > label{
-    display:none;
+main>section#form-contacto>form#contacto>label {
+    display: none;
 }
 
-main > section#form-contacto > form#contacto > input{
+main>section#form-contacto>form#contacto>input {
     margin-bottom: 0.5rem;
     height: 2rem;
 }
 
-main > section#form-contacto > form#contacto > input:hover{
+main>section#form-contacto>form#contacto>input:hover {
     margin-bottom: 0.5rem;
     height: 2rem;
     background-color: black;
-    border:4px solid grey;
+    border: 4px solid grey;
 }
 
-main > section#form-contacto > form#contacto > select#categoria{
-    margin-bottom:0.5rem;
+main>section#form-contacto>form#contacto>select#categoria {
+    margin-bottom: 0.5rem;
     background-color: rgb(204, 204, 204);
-    color:grey;
+    color: grey;
     height: 2rem;
 }
 
-main > section#form-contacto > form#contacto > span#caracteres{
-    margin-bottom:0.5rem;
-    color:grey;
+main>section#form-contacto>form#contacto>span#caracteres {
+    margin-bottom: 0.5rem;
+    color: grey;
     font-size: 0.9rem;
-    margin-left:0.3rem;
+    margin-left: 0.3rem;
 }
 
-main > section#form-contacto > form#contacto > textarea#mensaje{
-    margin-bottom:0.5rem;
-}
-
-main > section#form-contacto > form#contacto > input:last-child{
-    background-color: black;
-    color:white;
+main>section#form-contacto>form#contacto>textarea#mensaje {
+    margin-bottom: 0.5rem;
 }
 
 /*  FOOTER  */
-footer{
-    display:none;
+footer {
+    display: none;
+}
+
+/*  ANIMACIÓN BOTÓN  */
+.btn {
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid #e74c3c;
+    border-radius: 0.6em;
+    color: #e74c3c;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1;
+    margin: 20px;
+    padding: 1.2em 2.8em;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+.btn:hover,
+.btn:focus {
+    color: red;
+    outline: 0;
+}
+
+.enviar {
+    border-color: #3498db;
+    color: #fff;
+    box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db;
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+}
+
+.enviar:hover {
+    box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
 }

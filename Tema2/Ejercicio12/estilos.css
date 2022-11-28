@@ -1,0 +1,29 @@
+*{
+    box-sizing: border-box;
+}
+
+nav{
+    display:flex;
+    border:1px solid orange;
+}
+
+nav > ul{
+    display:flex;
+    list-style: none;
+    border:1px solid black;
+    padding-left:0;
+    flex: 100%;
+    justify-content: start;
+}
+
+nav > ul > li{
+    padding:0 5px;
+    border-style: hidden;
+}
+
+nav > ul > li#login{
+    display:flex;
+    flex:100%;
+    justify-content: end;
+    border:1px solid blue;
+}
