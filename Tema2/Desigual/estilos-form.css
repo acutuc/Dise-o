@@ -11,7 +11,7 @@ body {
 header {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
+    flex: 100%;
 }
 
 header>picture#logo-cabecera {
@@ -53,7 +53,7 @@ header>nav#menu-principal {
 }
 
 header>nav#menu-principal>div#hamburguesa {
-    width: 100%;
+    flex: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -83,7 +83,7 @@ header>nav#menu-principal>ul>li>ul.submenu>li {
 
 /*  MAIN   */
 main {
-    width: 100%;
+    flex: 100%;
 }
 
 main>section#form-contacto {
@@ -99,7 +99,7 @@ main>section#form-contacto>h2 {
 main>section#form-contacto>form#contacto {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    flex: 50%;
 
 }
 
@@ -138,8 +138,33 @@ main>section#form-contacto>form#contacto>textarea#mensaje {
 }
 
 /*  FOOTER  */
-footer {
-    display: none;
+footer{
+    display:flex;
+    flex:100%;
+}
+
+footer > nav#menu-adicional{
+    display:flex;
+    flex:100%;
+}
+
+footer>nav#menu-adicional>ul{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  background-color: black;
+  font-size: .6rem;
+  padding:1rem;
+  flex:100%;
+}
+
+footer>nav#menu-adicional>ul>li{
+  margin:.2rem;
+}
+
+footer>nav#menu-adicional>ul>li>a{
+  text-decoration: none;
+  color: white;
 }
 
 /*  ANIMACIÓN BOTÓN  */
@@ -174,7 +199,7 @@ footer {
 
 .btn:hover,
 .btn:focus {
-    color: red;
+    color: #3498db;
     outline: 0;
 }
 
