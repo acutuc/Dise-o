@@ -1,0 +1,32 @@
+*{
+    box-sizing:border-box;
+}
+
+main {
+    display:flex;
+}
+
+main > nav#menu-desplegable{
+    display:flex;
+}
+
+main > nav#menu-desplegable > ul{
+    display:flex;
+    flex-direction: column;
+    list-style:none;
+    padding:1px 0;
+    background-color: rgb(94, 94, 94);
+}
+
+main > nav#menu-desplegable > ul > li > a{
+    text-decoration: none;
+    background-color: rgb(214, 214, 214);
+    color:black;
+    border:1px solid rgb(94, 94, 94);
+    border-radius: 5px;
+}
+
+main > nav#menu-desplegable > ul > li > ul > li{
+    display:none;
+}
+

@@ -73,6 +73,24 @@ header>nav#menu-principal>ul {
     display: none;
 }
 
+header > nav#menu-principal > div#hamburguesa:hover ~ ul#menu{
+    display:block;
+    position:absolute;
+    left:8px;
+    top:117px;
+    background-color: rgb(114, 114, 114);
+    opacity: 50%;
+}
+
+header > nav#menu-principal > div#hamburguesa:hover ~ ul#menu > li > a{
+    text-decoration: none;
+}
+
+header > nav#menu-principal > div#hamburguesa:hover ~ ul#menu > li{
+    margin-bottom: 5px;
+}
+
+
 header>nav#menu-principal>ul>li>a {
     color: white;
 }

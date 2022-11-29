@@ -4,16 +4,17 @@
 
 nav{
     display:flex;
-    border:1px solid orange;
 }
 
 nav > ul{
     display:flex;
     list-style: none;
-    border:1px solid black;
-    padding-left:0;
+    background-color: rgb(202, 202, 202);
     flex: 100%;
     justify-content: start;
+    padding: 10px 0;
+    border: 2px solid rgb(255, 255, 212);
+    border-radius: 10px;
 }
 
 nav > ul > li{
@@ -21,9 +22,15 @@ nav > ul > li{
     border-style: hidden;
 }
 
+nav > ul > li > a {
+    text-decoration:none;
+    color:blue;
+    border-bottom: 1px solid black;
+    border-radius: 20%;
+}
+
 nav > ul > li#login{
     display:flex;
     flex:100%;
     justify-content: end;
-    border:1px solid blue;
 }
