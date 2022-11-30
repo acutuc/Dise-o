@@ -1,0 +1,77 @@
+*{
+    box-sizing: border-box;
+}
+
+header{
+    display:flex;
+    justify-content: space-between;
+}
+
+main{
+    display:flex;
+    flex-flow: row wrap;
+}
+
+main > input#busqueda{
+    margin: 10px;
+    flex:1 1 80%;
+    height: 35px;
+    text-align: center;
+    border:none;
+    background-color: rgb(241, 241, 241);
+}
+
+main > input#busqueda::placeholder{
+    color:rgb(168, 168, 168);
+}
+
+main > section{
+    display:flex;
+    flex-wrap: wrap;
+    width:100%;
+}
+
+main > section > article.producto{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    flex:50%;
+}
+
+main > section > article.producto > picture{
+    display:flex;
+    flex:50%;
+    height:auto;
+    align-items:start;
+}
+
+main > section > article.producto > picture > img{
+    width:98%;
+    height:auto;
+}
+
+main > section > article.producto > h3.titulo-producto{
+    text-align:center;
+    width:100%;
+    font-size: 15px;
+    align-self:start;
+    margin-top:2%;
+    margin-bottom:2%;
+}
+
+main > section > article.producto > p.precio, main > section > article.producto > p.envio{
+    margin:0 0 1% 0;
+}
+
+main > section > article.producto > p.precio{
+    font-weight: bold;
+}
+
+main > section > article.producto > p.opciones{
+    margin:0;
+    font-weight:bold;
+}
+
+footer{
+    background-color: rgb(245, 242, 229);
+}
