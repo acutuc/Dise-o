@@ -73,5 +73,54 @@ main > section > article.producto > p.opciones{
 }
 
 footer{
-    background-color: rgb(245, 242, 229);
+    background-color: rgb(207, 200, 166);
+    display:flex;
+    flex-flow:column;
+}
+
+footer > div#atencion-cliente{
+    margin-top:50px;
+    margin-left:15px;
+}
+
+footer > div#servicio-postventa{
+    margin-left: 15px;
+}
+
+footer > div#servicio-postventa > p.linea{
+    border-bottom: 1px solid grey;
+    line-height: 2rem;
+    width: 97%;
+}
+
+footer > div#servicio-postventa > p > a{
+    color:grey;
+    text-decoration: none;
+    cursor:pointer;
+}
+
+footer > div#rrss{
+    display:flex;
+    justify-content: space-between;
+    width:30%;
+}
+
+footer > div#rrss > picture > img{
+    width:30px;
+}
+
+footer > div#links-interes{
+    margin-left:15px;
+}
+
+footer > div#links-interes > p.linea{
+    border-bottom: 1px solid grey;
+    line-height: 2rem;
+    width: 97%;
+}
+
+footer > div#links-interes > p > a{
+    color:grey;
+    text-decoration: none;
+    cursor:pointer;
 }
