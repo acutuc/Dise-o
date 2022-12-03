@@ -10,23 +10,119 @@ main > nav#menu-desplegable{
     display:flex;
 }
 
+/*  ul externo  */
 main > nav#menu-desplegable > ul{
     display:flex;
     flex-direction: column;
-    list-style:none;
-    padding:1px 0;
-    background-color: rgb(94, 94, 94);
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+
+/*  ul interno  */
+main > nav#menu-desplegable > ul > li > ul{
+    list-style: none;
+    display:none;
+    padding: 0;
+}
+
+main > nav#menu-desplegable > ul > li{
+    background-color: rgb(38, 35, 35);
+    display:flex;
+    justify-content: center;
+    width: 100px;
 }
 
 main > nav#menu-desplegable > ul > li > a{
-    text-decoration: none;
-    background-color: rgb(214, 214, 214);
+    background-color: rgb(234, 234, 234);
     color:black;
-    border:1px solid rgb(94, 94, 94);
-    border-radius: 5px;
+    width: 96%;
+    text-align: center;
+    border: 1px solid rgb(38, 35, 35);
+    border-radius: 6px;
 }
 
-main > nav#menu-desplegable > ul > li > ul > li{
-    display:none;
+/*  ABOUT hover */
+main > nav#menu-desplegable > ul > li#nav-about:hover{
+    display:flex;
+    flex-direction: column;
+    text-align: center;
 }
 
+main > nav#menu-desplegable > ul > li#nav-about:hover > a{
+    color:white;
+    text-align:center;
+    background-color: grey;
+    margin:auto;
+}
+
+main > nav#menu-desplegable > ul > li#nav-about:hover > ul > li{
+    color:white;
+    text-align:center;
+    background-color: rgb(38, 35, 35);
+    margin:auto;
+}
+
+main > nav#menu-desplegable > ul > li#nav-about:hover > ul > li > a{
+    color:white;
+}
+
+main > nav#menu-desplegable > ul > li#nav-about:hover > ul{
+    display:block;
+}
+
+/*  PROJECTS hover */
+main > nav#menu-desplegable > ul > li#nav-projects:hover{
+    display:flex;
+    flex-direction: column;
+}
+
+main > nav#menu-desplegable > ul > li#nav-projects:hover > a{
+    color:white;
+    text-align:center;
+    background-color: grey;
+    margin:auto;
+}
+
+main > nav#menu-desplegable > ul > li#nav-projects:hover > ul > li{
+    color:white;
+    text-align:center;
+    background-color: rgb(38, 35, 35);
+    margin:auto;
+}
+
+main > nav#menu-desplegable > ul > li#nav-projects:hover > ul > li > a{
+    color:white;
+}
+
+main > nav#menu-desplegable > ul > li#nav-projects:hover > ul{
+    display:block;
+}
+
+/*  INTERACT hover */
+main > nav#menu-desplegable > ul > li#nav-interact:hover{
+    display:flex;
+    flex-direction: column;
+}
+
+main > nav#menu-desplegable > ul > li#nav-interact:hover > ul > li{
+    color:white;
+    text-align:center;
+    background-color: rgb(38, 35, 35);
+    margin:auto;
+}
+
+main > nav#menu-desplegable > ul > li#nav-interact:hover > ul > li > a{
+    color:white;
+}
+
+main > nav#menu-desplegable > ul > li#nav-interact:hover > a{
+    color:white;
+    text-align:center;
+    background-color: grey;
+    margin:auto;
+}
+
+main > nav#menu-desplegable > ul > li#nav-interact:hover > ul{
+    display:block;
+}
