@@ -1,0 +1,273 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin:0;
+    font-family:"Open Sans Condensed";
+}
+
+div#content{
+    display:flex;
+    flex-flow: row wrap;
+}
+
+div#content > header{
+    display:flex;
+    flex-flow:row wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/*  MENÚ   */
+div#content > header > nav#main-menu > input#hamburger, div#content > header > nav#main-menu > div#menu-toggle{
+    display:none;
+}
+
+/*  MENÚ FLOTANTE   */
+div#content > header > nav#main-menu > input#hamburger:checked ~ div#menu-toggle{
+    display:flex;
+    position:absolute;
+    top:5rem;
+    background-color: rgb(226, 226, 226);
+    width: 100%;
+}
+
+div#content > header > nav#main-menu > input#hamburger:checked ~ div#menu-toggle > ul#op-idiomas, div#content > header > nav#main-menu > input#hamburger:checked ~ div#menu-toggle > ul#op-menu{
+    list-style: none;
+}
+
+div#content > header > nav#main-menu > input#hamburger:checked ~ div#menu-toggle > ul#op-idiomas > li > a, div#content > header > nav#main-menu > input#hamburger:checked ~ div#menu-toggle > ul#op-menu > li > a{
+    list-style: none;
+    text-decoration: none;
+    color:black;
+}
+
+div#content > header > nav#main-menu > input#hamburger:checked ~ div#menu-toggle{
+    display:flex;
+    flex-direction: column;
+}
+
+div#content > header > nav#main-menu > input#hamburger:checked ~ div#menu-toggle > ul#op-idiomas{
+    display:flex;
+    padding-left: 0;
+    margin:1rem;
+}
+
+div#content > header > nav#main-menu > input#hamburger:checked ~ div#menu-toggle > ul#op-idiomas > li > a{
+    border-right: 1px solid orange;
+    margin-right:0.5rem;
+    text-align: center;
+}
+
+div#content > header > nav#main-menu > input#hamburger:checked ~ div#menu-toggle > ul#op-menu{
+    padding-left: 0;
+}
+
+div#content > header > nav#main-menu > input#hamburger:checked ~ div#menu-toggle > ul#op-menu > li{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top:1px solid lightgrey;
+    border-bottom:1px solid lightgrey;
+}
+
+div#content > header > nav#main-menu > input#hamburger:checked ~ div#menu-toggle > ul#op-menu > li > a{
+    margin-left:1rem;
+}
+
+div#content > header > nav#main-menu > input#hamburger:checked ~ div#menu-toggle > ul#op-menu > li > span.icon-sub{
+    background-color: grey;
+    padding:1rem;
+}
+
+/*  LOGO    */
+div#content > header > img#logo{
+    width: 13rem;
+    height: auto;
+}
+
+/*  LOGIN Y BOLSA  */
+div#content > header > nav#login-shop > ul{
+    list-style: none;
+    display:flex;
+}
+
+div#content > header > nav#login-shop > ul > li > i{
+    font-size:2rem;
+    margin:0.5rem;
+}
+
+/*  LUPA    */
+div#content > header > nav#search{
+    display:flex;
+    align-items: center;
+    width:100%;
+    background-color: black;
+}
+
+div#content > header > nav#search > div#searcher{
+    display:flex;
+    align-items: center;
+}
+
+div#content > header > nav#search > div#searcher > svg{
+    color:white;
+    margin:1rem;
+    height: auto;
+}
+
+div#content > header > nav#search > div#searcher > input::placeholder{
+    color:white;
+    background-color:black;
+}
+
+div#content > header > nav#search > div#searcher > input{
+    font-size:1rem;
+}
+
+
+
+/*  MAIN   */
+div#content > main{
+    display:flex;
+    flex-flow:row wrap;
+}
+
+div#content > main > section#section-giftguide{
+    display: flex;
+    flex-flow:row wrap;
+}
+
+div#content > main > section#section-giftguide > div#header-giftguide{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 100%;
+}
+
+div#content > main > section#section-giftguide > div#header-giftguide > h2{
+    margin-left:1rem;
+}
+
+div#content > main > section#section-giftguide > picture#head-giftguide{
+    display:flex;
+    padding:1rem;
+}
+
+div#content > main > section#section-giftguide > picture#head-giftguide > img{
+    width:100%;
+}
+
+div#content > main > section#section-giftguide > article.category{
+    display:flex;
+    align-items: center;
+    margin-left:1rem;
+    flex: 46%;
+    height: auto;
+}
+
+div#content > main > section#section-giftguide > article.category > a > img{
+    width: 100%;
+}
+
+div#content > main > section#section-giftguide > article.category > a > ul.menu-options{
+    display:flex;
+    padding-left: 0;
+}
+
+div#content > main > section#section-giftguide > article.category > a > ul.menu-options > li > img{
+    width: 5rem;
+    margin-right: 1rem; 
+}
+
+div#content > main > section#section-giftguide > article.category > a > ul.menu-options{
+    list-style: none;
+}
+
+
+
+/*  FOOTER  */
+div#content > footer{
+    display:flex;
+    flex-flow:row wrap;
+    background-color: rgb(240, 240, 240);
+}
+
+div#content > footer > nav#additional-menu1, div#content > footer > nav#additional-menu2{
+    display:flex;
+    flex-direction: column;
+    flex:45%;
+    margin-left:1rem;
+}
+
+div#content > footer > nav#additional-menu1 > ul, div#content > footer > nav#additional-menu2 > ul{
+    list-style: none;
+    padding-left:0;
+}
+
+div#content > footer > nav#additional-menu1 > h5, div#content > footer > nav#additional-menu2 > h5{
+    font-size: 1rem;
+}
+
+div#content > footer > nav#additional-menu1 > ul > li > a, div#content > footer > nav#additional-menu2 > ul > li > a{
+    text-decoration: none;
+    color:black;
+}
+
+div#content > footer > nav#additional-menu1 > span.line-footer, div#content > footer > nav#additional-menu2 > span.line-footer{
+    border:1px solid black;
+    width: 2.5rem;
+}
+
+div#content > footer > nav#apps-menu{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    flex:100%;
+}
+
+div#content > footer > nav#apps-menu > h5{
+    font-size: 1rem;
+}
+
+div#content > footer > nav#apps-menu > span.line-footer{
+    border:1px solid black;
+    width: 2.5rem;
+}
+
+div#content > footer > nav#apps-menu > ul{
+    display:flex;
+    list-style: none;
+    padding-left: 0;
+}
+div#content > footer > nav#apps-menu > ul > li{
+    width: 50%;
+}
+
+div#content > footer > nav#apps-menu > ul > li > a > img{
+    width:100%;
+}
+
+div#content > footer > small#info-footer{
+    display:flex;
+    flex-flow:row wrap;
+    background-color: white;
+    flex: 100%;
+}
+
+div#content > footer > small#info-footer > span{
+    display:flex;
+    flex-flow:row wrap;
+    flex:60%;
+}
+
+div#content > footer > small#info-footer > span > span{
+    flex:100%;
+    color:grey;
+}
+
+@media all and (min-width: 1000) {
+
+}
