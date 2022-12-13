@@ -1,0 +1,162 @@
+*{
+    box-sizing: border-box;
+}
+
+header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*  Efectos hamburguesa   */
+header > label{
+	display:flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	align-items: center;
+	width: 1rem;
+	height: 1rem;
+	transition: transform 1s;
+}
+
+header > label > input#hamburguer-icon{
+    display:none;
+}
+
+header > label > span.hamburguer-line{
+	height: 2px;
+    width: 100%;
+	background-color: black;
+	transition:transform 1s , visibility 1s , background-color 1s;
+}
+
+header > label > input#hamburguer-icon:checked ~ span.hamburguer-line:nth-child(3){
+	visibility: hidden;
+	background-color: white;
+}
+
+header > label > input#hamburguer-icon:checked ~ span.hamburguer-line:nth-child(2){
+	transform: translate(0,0.10rem) rotate(45deg) ;
+}
+
+header > label > input#hamburguer-icon:checked ~ span.hamburguer-line:nth-child(4){
+	transform: translate(0,-.55rem) rotate(-45deg);
+}
+
+main{
+    display:flex;
+    flex-flow: row wrap;
+}
+
+main > input#busqueda{
+    margin: 10px;
+    flex:1 1 80%;
+    height: 35px;
+    text-align: center;
+    border:none;
+    background-color: rgb(241, 241, 241);
+}
+
+main > input#busqueda::placeholder{
+    color:rgb(168, 168, 168);
+}
+
+main > section{
+    display:flex;
+    flex-wrap: wrap;
+    width:100%;
+}
+
+main > section > article.producto{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    flex:50%;
+}
+
+main > section > article.producto > picture{
+    display:flex;
+    flex:50%;
+    height:auto;
+    align-items:start;
+}
+
+main > section > article.producto > picture > img{
+    width:98%;
+    height:auto;
+}
+
+main > section > article.producto > h3.titulo-producto{
+    text-align:center;
+    width:100%;
+    font-size: 15px;
+    align-self:start;
+    margin-top:2%;
+    margin-bottom:2%;
+}
+
+main > section > article.producto > p.precio, main > section > article.producto > p.envio{
+    margin:0 0 1% 0;
+}
+
+main > section > article.producto > p.precio{
+    font-weight: bold;
+}
+
+main > section > article.producto > p.opciones{
+    margin:0;
+    font-weight:bold;
+}
+
+footer{
+    background-color: rgb(207, 200, 166);
+    display:flex;
+    flex-flow:column;
+}
+
+footer > div#atencion-cliente{
+    margin-top:50px;
+    margin-left:15px;
+}
+
+footer > div#servicio-postventa{
+    margin-left: 15px;
+}
+
+footer > div#servicio-postventa > p.linea{
+    border-bottom: 1px solid grey;
+    line-height: 2rem;
+    width: 97%;
+}
+
+footer > div#servicio-postventa > p > a{
+    color:grey;
+    text-decoration: none;
+    cursor:pointer;
+}
+
+footer > div#rrss{
+    display:flex;
+    justify-content: space-between;
+    width:30%;
+}
+
+footer > div#rrss > picture > img{
+    width:30px;
+}
+
+footer > div#links-interes{
+    margin-left:15px;
+}
+
+footer > div#links-interes > p.linea{
+    border-bottom: 1px solid grey;
+    line-height: 2rem;
+    width: 97%;
+}
+
+footer > div#links-interes > p > a{
+    color:grey;
+    text-decoration: none;
+    cursor:pointer;
+}
