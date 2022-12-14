@@ -27,7 +27,7 @@ header > label > span.hamburguer-line{
 	height: 2px;
     width: 100%;
 	background-color: black;
-	transition:transform 1s , visibility 1s , background-color 1s;
+	transition:transform 1s, visibility 1s, background-color 1s;
 }
 
 header > label > input#hamburguer-icon:checked ~ span.hamburguer-line:nth-child(3){
