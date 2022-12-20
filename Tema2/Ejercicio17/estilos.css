@@ -1,38 +1,76 @@
-* {
-    box-sizing: border-box;
+*{
+  box-sizing:border-box;
 }
 
 body{
-    background-image: url("images/99.jpg");
+  padding: 0 5rem;
+  margin:0;
+  background-image: url("99.jpg");
 }
-
 div.row{
-    display:flex;
+  margin:0;
+  padding: 0;
+
 }
 
-div.row > div.large-12{
-    display:flex;
+div.row > div.columns > ul.polaroids{
+  display: flex;
+  flex-flow:row wrap;
+  list-style: none;
+  justify-content: space-around;
+  padding:0;
+
+
 }
 
-div.row > div.large-12 > ul.polaroids{
-    list-style: none;
-    padding:0;
-    display: flex;
-    flex-flow:row wrap;
+div.row > div.columns > ul.polaroids > li{
+
+  background-color: white;
+  padding:.5rem .5rem 1rem .5rem;
+  margin:3rem;
+  flex:15%;
+  text-align: center;
+  box-shadow: .4rem .6rem rgb(0,0,0,.1);
+
+  transition: all .5s linear .5s;
+
 }
 
-div.row > div.large-12 > ul.polaroids > li{
-    padding: 0;
-    margin-top:1rem;
-    width: 25%;
-    display:flex;
+div.row > div.columns > ul.polaroids > li:hover{
+  transform: rotate(0) scale(1.3,1.3);
+  box-shadow:none;
+
 }
 
-div.row > div.large-12 > ul.polaroids > li > a > img{
-    max-width: 100%;
+div.row > div.columns > ul.polaroids > li > a{
+  text-decoration: none;
+  color: black;
+  font-weight: lighter;
+
 }
 
-div.row > div.large-12 > ul.polaroids > li > a{
-    display:flex;
-    width: 90%;
+
+
+div.row > div.columns > ul.polaroids > li > a:after{
+  content: attr(title);
+}
+
+div.row > div.columns > ul.polaroids >li > a > img{
+  max-width: 100%;
+  min-width: 10rem;
+  margin-bottom: 1rem;
+}
+
+div.row > div.columns > ul > li:nth-child(even){
+  transform:rotate(-7deg);
+
+}
+
+div.row > div.columns > ul > li:nth-child(odd){
+  transform:rotate(7deg);
+
+}
+
+div.row > div.columns > ul > li:nth-child(3n+1){
+  transform:rotate(5deg);
 }
