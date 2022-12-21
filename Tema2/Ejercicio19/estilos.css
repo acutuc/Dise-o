@@ -1,0 +1,70 @@
+*{
+    box-sizing:border-box;
+}
+
+body{   
+    width: 100%;
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(21, 3, 3);
+}
+
+main > form.form{
+    width: 100%;
+    height: 50px;
+    max-width: 400px;
+    position: relative;
+    overflow: hidden;
+}
+
+main > form.form > input{
+    width: 100%;
+    height: 100%;
+    background: none;
+    color: white;
+    padding-top: 20px;
+    border: none;
+    outline: 0px;
+}
+
+main > form.form > label.lbl-nombre{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid #c7c7c7;
+}
+
+main > form.form > label.lbl-nombre:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 100%;
+    border-bottom: 3px solid #2ecece;
+    transform: translateX(-100%);
+    transition: all 0.3s ease;
+}
+
+main > form.form > label.lbl-nombre > span.text-nomb{
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    transition: all 0.3s ease;
+    color: white;
+}
+
+main > form.form > input:focus + label.lbl-nombre > span.text-nomb, main > form.form > input:valid + label.lbl-nombre > span.text-nomb{
+    transform: translateY(-150%);
+    font-size: 14px;
+    color: #2ecece;
+}
+
+main > form.form > input:focus + label.lbl-nombre:after, main > form.form > input:valid + label.lbl-nombre:after{
+    transform: translateX(0%);
+}

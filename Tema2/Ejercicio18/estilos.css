@@ -1,0 +1,20 @@
+.tooltip {
+    position: relative;
+    top:3px;
+}
+
+p .texto {
+    position: absolute;
+    z-index: 1;
+    visibility: hidden;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 5px;
+    left: 10rem;
+}
+
+.tooltip:hover ~ .texto {
+    visibility: visible;
+}
