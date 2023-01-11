@@ -1,0 +1,35 @@
+*{
+    box-sizing:border-box;
+}
+
+/*  HEADER  */
+header{
+    display:flex;
+    max-height: 130px;
+    max-width: 360px;
+}
+
+/*  Menú hamburguesa  */
+header > nav{
+    height: 30px;
+    margin-top:10px;
+}
+
+header > nav > div#hamburguesa{
+    height: 30px;
+}
+
+header > nav > div#hamburguesa > img{
+    width: 30px;
+    height: 30px;
+}
+
+/*  Imagen  */
+header > picture > img{
+    width: 211px;
+    height: 75px;
+}
+
+header > picture{
+    margin-left:15%;
+}
