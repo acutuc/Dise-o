@@ -2,29 +2,87 @@
     box-sizing:border-box;
 }
 
-/*  HEADER  */
+body{
+    display:flex;
+    flex-direction: column;
+    margin:0;
+} 
+
+/* ---- HEADER ---- */
 header{
     display:flex;
-    max-height: 130px;
-    max-width: 360px;
+    max-height: 90px;
+    max-width: 480px;
 }
 
-/*  Menú hamburguesa  */
-header > nav{
-    height: 30px;
-    margin-top:10px;
+/*  Menú  */
+header > nav.main-menu{
+    display:flex;
+    flex-flow:row wrap;
+    line-height: 1.8rem;
+    width: 10rem;
+    background-color: #3B9E2D;
+    padding:4rem 0 100% 0;
+    position:relative;
+    right:8px;
+    bottom:8px;
+    transition: transform 1s;
 }
 
-header > nav > div#hamburguesa{
-    height: 30px;
+/*  Elementos del menú  */
+header > nav.main-menu > a.item-menu{
+    text-decoration: none;
+    color:white;
+    border-top:1px solid white;
+    border-bottom:1px solid white;
+    width: 100%;
+    text-align: center;
+    height: 2rem;
+    font-size:0.7rem;
 }
 
-header > nav > div#hamburguesa > img{
-    width: 30px;
-    height: 30px;
+/*  Barras de la hamburguesa  */
+header > label.menu-toogle > svg{
+    color:white;
 }
 
-/*  Imagen  */
+/*  Hamburguesa  */
+header > label.menu-toogle{
+    display:flex;
+    flex-direction: row wrap;
+    align-items: center;
+    justify-content: center;
+    background-color:#3B9E2D;
+    border-radius: 10%;
+    width: 2rem;
+    height: 2rem;
+    position:relative;
+    right: 20px;
+    transition: transform 1s;
+}
+
+/*  Checkbox  y animaciones*/
+header > input#hamburger{
+    visibility: hidden;
+}
+
+header > input#hamburger:checked ~ label.menu-toogle{
+    transform: translateX(-1000%);
+}
+
+header > input#hamburger:checked ~ nav.main-menu{
+    transform: translateX(-100%);
+}
+
+header > input#hamburger{
+    order:2;
+}
+
+header > label.menu-toogle{
+    order:3;
+}
+
+/*  Logo  */
 header > picture > img{
     width: 211px;
     height: 75px;
@@ -32,4 +90,45 @@ header > picture > img{
 
 header > picture{
     margin-left:15%;
+    max-height: 75px;
+}
+
+/* ---- MAIN ---- */
+
+/*  Cabecera "CIUDADES"  */
+main > div.ciudades{
+    display:flex;
+    font-family: 'Karla', sans-serif;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    width: 100%;
+    height: 28px;
+    background-color: #787575;
+}
+
+/*  Section, ciudades e imágenes  */
+main > section.imagenes{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 2rem 5rem 2rem;
+}
+
+main > section.imagenes > article.ciudad{
+    padding:1rem;
+    font-family: 'Rubik', sans-serif;
+    text-align: center;
+}
+
+main > section.imagenes > article.ciudad > picture > img{
+    max-width: 100%;
+}
+
+/* ---- FOOTER ---- */
+
+footer{
+    display: flex;
+    width: 100%;
+    height: 10rem;
+    background-color: #787575;
 }
