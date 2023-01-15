@@ -13,24 +13,27 @@
 
 <body>
     <header>
-        <input type="checkbox" id="hamburger" checked />
-        <label for="hamburger" class="menu-toogle">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="30" height="30"
-                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
-                stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <line x1="4" y1="6" x2="20" y2="6" />
-                <line x1="4" y1="12" x2="20" y2="12" />
-                <line x1="4" y1="18" x2="20" y2="18" />
-            </svg>
-        </label>
-        <nav class="main-menu">
-            <a href="#" class="item-menu">CIUDADES</a>
-            <a href="#" class="item-menu">COMPRA UN BONO</a>
-            <a href="#" class="item-menu">¿QUIÉNES SOMOS?</a>
+        <nav>
+            <div id="menuToggle">
+                <input type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+                <ul id="menu">
+                    <a href="#">
+                        <li>CIUDADES</li>
+                    </a>
+                    <a href="#">
+                        <li>COMPRA UN BONO</li>
+                    </a>
+                    <a href="#">
+                        <li>¿QUIÉNES SOMOS?</li>
+                    </a>
+                </ul>
+            </div>
         </nav>
         <picture>
-            <img src="images/Acusports.png" alt="logo">
+            <img src="../images/Acusports.png" alt="logo">
         </picture>
     </header>
 
