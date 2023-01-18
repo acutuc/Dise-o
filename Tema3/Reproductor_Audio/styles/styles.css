@@ -1,0 +1,57 @@
+*{
+  box-sizing: border-box;
+}
+
+div#contenido{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  border:.1rem solid #3B9E2D;
+  padding:1rem;
+  width:500px;
+  border-radius: 2rem;
+  -webkit-box-shadow: 10px 10px 24px 2px #3B9E2D;
+  -moz-box-shadow: 10px 10px 24px 2px #3B9E2D;
+  box-shadow: 10px 10px 24px 2px #3B9E2D;
+
+}
+
+div#contenido > audio#reproductor, div#botonera{
+  flex:0 100%;
+  margin:.5rem 0;
+
+}
+
+div#contenido > div#info{
+  border:.05rem solid #3B9E2D;
+  border-radius: 5rem;
+  padding:.5rem;
+  margin-bottom:1rem;
+}
+
+div#contenido > div#botonera{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+div#contenido > div#botonera > button{
+  border:.05rem solid #3B9E2D;
+  border-radius: 5rem;
+  font-weight: bold;
+  transition: all .1s linear .2s;
+  background-color: #3B9E2D;
+}
+
+div#contenido > div#botonera > button#bajarVol, div#contenido > div#botonera > button#subirVol{
+  width:30px;
+}
+
+div#contenido > div#botonera > picture > img{
+  width:20px;
+  height:20px;
+}
+
+div#contenido > div#botonera > button:hover{
+  cursor:pointer;
+}

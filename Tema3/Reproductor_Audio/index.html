@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
-  <title>Reproductor de audio</title>
-  <link rel="stylesheet" href="estilos/estilos.css" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/styles.css" />
   <script type='text/javascript' src='js/script.js'></script>
+  <title>Reproductor de Audio</title>
 </head>
 
 <body>
-
   <div id="contenido">
     <audio id='reproductor' autoplay>
       <source src='audio/hotel-california.mp3' type='audio/mpeg' />
@@ -26,11 +27,12 @@
       <button id='restart'>RESTART</button>
       <button id='loop'>LOOP</button>
       <button id='bajarVol'> - </button>
-      <img id="altavoz" src='images/altavoz.svg' width="20px" height="20px" />
+      <picture>
+        <img id="altavoz" src='images/altavoz.svg' />
+      </picture>
       <button id='subirVol'> + </button>
     </div>
   </div>
-
 </body>
 
 </html>

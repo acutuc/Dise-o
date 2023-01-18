@@ -1,0 +1,9 @@
+*{
+    box-sizing: border-box;
+}
+
+div#botonera > picture > img#play{
+    width: 30px;
+    height: 30px;
+    cursor:pointer;
+}
