@@ -19,7 +19,6 @@ div#contenido{
 div#contenido > audio#reproductor, div#botonera{
   flex:0 100%;
   margin:.5rem 0;
-
 }
 
 div#contenido > div#info{
@@ -35,19 +34,21 @@ div#contenido > div#botonera{
   justify-content: space-around;
 }
 
-div#contenido > div#botonera > button{
-  border:.05rem solid #3B9E2D;
-  border-radius: 5rem;
+div#contenido > div#botonera > div.boton{
   font-weight: bold;
   transition: all .1s linear .2s;
-  background-color: #3B9E2D;
 }
 
 div#contenido > div#botonera > button#bajarVol, div#contenido > div#botonera > button#subirVol{
   width:30px;
 }
 
-div#contenido > div#botonera > picture > img{
+div#contenido > div#botonera > div.boton > picture{
+  width: 20px;
+  height: 20px;
+}
+
+div#contenido > div#botonera > div.boton > picture > img{
   width:20px;
   height:20px;
 }

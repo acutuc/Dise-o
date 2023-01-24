@@ -15,20 +15,13 @@ window.onload = () => {
   if (audio.duration > 60) {
     tiempoTotal.innerHTML = parseInt(audio.duration / 60) + ":" + parseInt(audio.duration % 60);
   } else {
-    tiempoTotal.innerHTML = "0:" + audio.duration;
-  }
-
-  /*
-  contenido.addEventListener("click", () => {
-    if (play.innerHTML == 'PLAY') {
-      play.style.background = "#787575";
-      play.innerHTML = 'PAUSE';
-    } else {
-      play.style.background = "#3B9E2D";
-      play.innerHTML = 'PLAY';
+    if(isNaN(audio.duration)){
+      tiempoTotal.innerHTML ="6:30";
+    }else{
+      tiempoTotal.innerHTML = "0:" + audio.duration;
     }
-  })
-*/
+    
+  }
 
   audio.addEventListener('timeupdate', () => {
     var minutos;
@@ -49,21 +42,19 @@ window.onload = () => {
 
 
   play.addEventListener('click', () => {
-    if (play.innerHTML == 'PLAY') {
-      audio.play();
-      play.style.background = "#787575";
-      play.innerHTML = 'PAUSE';
-    } else {
+    if (document.getElementById("play").src = "images/pause.svg") {
       audio.pause();
-      play.style.background = "#3B9E2D";
-      play.innerHTML = 'PLAY';
+      document.getElementById("play").src = "images/play.svg";
+    }else{
+      audio.play();
+      document.getElementById("play").src = "images/pause.svg";
     }
   })
 
   stop.addEventListener('click', () => {
     audio.pause();    //Paramos la reproducción
     audio.currentTime = 0    //La llevamos al inicio
-    play.innerHTML = 'PLAY'    //Establecemos de nuevo el botón Play a su estado inicial
+    document.getElementById("play").src = "images/play.svg";    //Establecemos de nuevo el botón Play a su estado inicial
   })
 
   restart.addEventListener('click', () => {
@@ -73,10 +64,10 @@ window.onload = () => {
   loop.addEventListener('click', () => {
     if (audio.loop == false) {
       audio.loop = true;
-      this.style.background = '#787575';
+      document.getElementById("loop").src="images/loop.svg"
     } else {
       audio.loop = false;
-      this.style.background = '#3B9E2D';
+      document.getElementById("loop").src="images/exit-loop.svg"
     }
   })
 
