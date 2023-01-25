@@ -42,8 +42,9 @@ window.onload = () => {
 
 
   play.addEventListener('click', () => {
-    if (document.getElementById("play").src = "images/pause.svg") {
+    if (document.getElementById("play").src == "images/pause.svg") {
       audio.pause();
+      console.log(play)
       document.getElementById("play").src = "images/play.svg";
     }else{
       audio.play();
