@@ -43,12 +43,12 @@ div#contenido > div#botonera > button#bajarVol, div#contenido > div#botonera > b
   width:30px;
 }
 
-div#contenido > div#botonera > div.boton > picture{
+div#contenido > div#botonera > div.boton > {
   width: 20px;
   height: 20px;
 }
 
-div#contenido > div#botonera > div.boton > picture > img{
+div#contenido > div#botonera > div.boton > img{
   width:20px;
   height:20px;
 }
