@@ -16,7 +16,7 @@ window.onload = () => {
     tiempoTotal.innerHTML = parseInt(audio.duration / 60) + ":" + parseInt(audio.duration % 60);
   } else {
     if(isNaN(audio.duration)){
-      tiempoTotal.innerHTML ="6:30";
+      tiempoTotal.innerHTML ="5:50";
     }else{
       tiempoTotal.innerHTML = "0:" + audio.duration;
     }
@@ -42,23 +42,26 @@ window.onload = () => {
 
 
   play.addEventListener('click', () => {
-    if (document.getElementById("play").src = "images/pause.svg") {
+    if (play.alt == "play") {
       audio.pause();
+      play.alt = "pause"
+      console.log(play.alt)
       document.getElementById("play").src = "images/play.svg";
     }else{
       audio.play();
+      play.alt = "play"
       document.getElementById("play").src = "images/pause.svg";
     }
   })
 
   stop.addEventListener('click', () => {
-    audio.pause();    //Paramos la reproducción
-    audio.currentTime = 0    //La llevamos al inicio
-    document.getElementById("play").src = "images/play.svg";    //Establecemos de nuevo el botón Play a su estado inicial
+    audio.pause();  
+    audio.currentTime = 0 
+    document.getElementById("play").src = "images/play.svg"; 
   })
 
   restart.addEventListener('click', () => {
-    audio.currentTime = 0;    //Mandamos la reproducción al principio pero NO la paramos
+    audio.currentTime = 0;  
   })
 
   loop.addEventListener('click', () => {
