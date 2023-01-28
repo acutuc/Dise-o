@@ -168,7 +168,7 @@ footer{
 }
 
 /*  Síguenos y RRSS  */
-footer > div.siguenos{
+footer > div.redes{
     display:flex;
     flex-direction: column;
     color:white;
@@ -177,20 +177,20 @@ footer > div.siguenos{
     padding:1rem;
 }
 
-footer > div.siguenos > span{
+footer > div.redes > span{
     text-align: center;
     padding-bottom: 1rem;
 }
 
 /*  Iconos RRSS  */
-footer > div.siguenos > div.rrss{
+footer > div.redes > div.rrss{
     display:flex;
     width: 100%;
     justify-content: space-around;
 }
 
 /*  Tamaño iconos  */
-footer > div.siguenos > div.rrss > picture > img{
+footer > div.redes > div.rrss > picture > img{
     width: 30px;
     cursor: pointer;
 }
@@ -558,4 +558,15 @@ main > div.lista > div.par > div.participante > span.circulo{
     background-color: #D9D9D9;
     margin-right: 0.5rem;
     border-radius: 50%;
+}
+
+ /*---- Aviso legal ----*/
+main > div#texto{
+    font-family: 'Karla', sans-serif;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+@media all and (min-width: 600px) {
+
 }
