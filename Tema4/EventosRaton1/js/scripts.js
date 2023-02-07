@@ -9,6 +9,7 @@ $(document).ready(
     }
 )
 */
+/*
 $(document).ready(
     () => {
             $("div#news > article.noticia > img").click(
@@ -23,3 +24,15 @@ $(document).ready(
             )
     }
 )
+*/
+
+$(document).ready(function () {
+    $(document).keypress(function (e) {
+        e.preventDefault();
+        $("#tecla-pulsada").html(e.which + ": " + String.fromCharCode(e.which))
+        if (String.fromCharCode(e.which) == "d") {
+            $("div#news > article.noticia > img").siblings().toggle()
+        }
+    }
+    )
+})
