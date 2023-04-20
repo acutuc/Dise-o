@@ -9,28 +9,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Karla" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Rubik" rel="stylesheet">
     <link href="estilos/estilos.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <body>
     <header>
-        <nav>
-            <div id="menuToggle">
-                <input type="checkbox" />
-                <span></span>
-                <span></span>
-                <span></span>
-                <ul id="menu">
-                    <a href="index.html">
-                        <li>CIUDADES</li>
-                    </a>
-                    <a href="src/quienes_somos.html">
-                        <li>¿QUIÉNES SOMOS?</li>
-                    </a>
-                </ul>
+        <div id="sidebar">
+            <div class="toggle-btn">
+                <span>&#9776</span>
             </div>
-        </nav>
+            <ul>
+                <a href="index.html">
+                    <li>CIUDADES</li>
+                </a>
+                <a href="src/quienes_somos.html">
+                    <li>¿QUIÉNES SOMOS?</li>
+                </a>
+            </ul>
+        </div>
         <picture>
-            <img src="images/Acusports.png" alt="logo">
+            <a href="index.html"><img src="images/Acusports.png" alt="logo"></a>
         </picture>
     </header>
 
@@ -42,7 +40,7 @@
             <article class="ciudad">
                 <span class="titulo">ESTEPONA</span>
                 <picture>
-                    <a href="src/deportes.html"><img src="images/estepona.jpg" alt="Estepona" title="Estepona"></a> 
+                    <a href="src/deportes.html"><img src="images/estepona.jpg" alt="Estepona" title="Estepona"></a>
                 </picture>
             </article>
             <article class="ciudad">
@@ -54,7 +52,7 @@
             <article class="ciudad">
                 <span class="titulo">CÁDIZ</span>
                 <picture>
-                    <a href="src/deportes.html"><img src="images/cadiz.jpg" alt="Cádiz" title="Cádiz"></a> 
+                    <a href="src/deportes.html"><img src="images/cadiz.jpg" alt="Cádiz" title="Cádiz"></a>
                 </picture>
             </article>
         </section>
@@ -86,6 +84,16 @@
 
     </footer>
 
+    <div id="div-cookies" style="display: none;">
+        Necesitamos usar cookies para que funcione todo, si permanece aquí acepta su uso, más información en
+        <a hreflang="es" href="/info/aviso-legal">Aviso Legal</a>
+        y la
+        <a hreflang="es" href="/info/politica-de-privacidad">Política de Privacidad</a>.<br><br>
+        <button type="button" class="btn btn-sm btn-primary" onclick="acceptCookies()">
+            Acepto el uso de cookies
+        </button>
+    </div>
+    <script src="js/scripts.js"></script>
 </body>
 
 </html>
