@@ -25,7 +25,7 @@ body{
 header{
     display:flex;
     max-height: 90px;
-    max-width: 480px;
+    max-width: 100%;
 }
 
 /*  Menú  */
@@ -524,7 +524,35 @@ main > div#texto{
 }
 
 
-
+/* VERSIÓN TABLET */
 @media all and (min-width: 600px) {
-    
+
+    header{
+        display:flex;
+        max-height: 90px;
+        max-width: 100%;
+    }
+
+    main > section{
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Karla', sans-serif;
+    }
+
+    main > section > article{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding:1rem;
+        width: 50%;
+    }
+}
+
+/* VERSIÓN ESCRITORIO */
+@media all and (min-width: 1100) {
+
 }
