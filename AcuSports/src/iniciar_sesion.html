@@ -33,32 +33,20 @@
 
     <main>
         <div class="ciudades">
-            <span>REGISTRO</span>
+            <span>INICIAR SESIÓN</span>
         </div>
         <form method="post" action="registrarse.html" class="formulario">
             <div class="campos">
-                <input type="text" placeholder="Nombre">
+                <input type="text" placeholder="Usuario">
             </div>
             <div class="campos">
-                <input type="text" placeholder="Apellidos">
-            </div>
-            <div class="campos">
-                <input type="text" placeholder="Dirección">
-            </div>
-            <div class="campos">
-                <input type="text" placeholder="Fecha de nacimiento" onfocus="(this.type='date')">
-            </div>
-            <div class="campos">
-                <input type="email" placeholder="Correo electrónico">
-            </div>
-            <div class="campos">
-                <input type="text" placeholder="Nombre de usuario">
-            </div>
-            <div class="campos">
-                <input type="password" placeholder="Contraseña">
+                <input type="passwrod" placeholder="Contraseña">
             </div>
             <div class="boton">
-                <button type="submit">INICIAR SESIÓN</button>
+                <button type="reset" onclick="alert()">INICIAR SESIÓN</button>
+            </div>
+            <div class="no_registro">
+                <a href="../src/registrarse.html">¿No estás registrado?</a>
             </div>
         </form>
     </main>

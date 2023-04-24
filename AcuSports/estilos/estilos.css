@@ -179,7 +179,7 @@ main > div.formulario{
     height: 38px;
 }
 
-main > div.formulario > span{
+main > div.formulario > a{
     width: 50%;
     height: 100%;
     display:flex;
@@ -192,6 +192,7 @@ main > div.formulario > span{
     font-family: 'Karla', sans-serif;
     justify-content: center;
     cursor: pointer;
+    text-decoration:none;
 }
 
 main > picture > img{
@@ -272,6 +273,7 @@ main > section > article > div.lugares > div.evento{
     background-color: #9FFF90;
     border-radius: 10px;
     margin-bottom: 0.5rem;
+    cursor:pointer;
 }
 
 main > section > article > div.lugares > div.evento > div.mayus {
@@ -301,6 +303,7 @@ main > section > article > div.lugares > div.green{
     background-color: #54FF84;
     border-radius: 10px;
     margin-bottom: 0.5rem;
+    cursor:pointer;
 }
 
 main > section > article > div.lugares > div.green > div.mayus {
@@ -361,6 +364,7 @@ main > section > article > div.lugares > div.brown{
     background-color: #EBB069;
     border-radius: 10px;
     margin-bottom: 0.5rem;
+    cursor:pointer;
 }
 
 main > section > article > div.lugares > div.brown > div.mayus {
@@ -391,6 +395,7 @@ main > section > article > div.lugares > div.blue{
     background-color: #5DB0FD;
     border-radius: 10px;
     margin-bottom: 0.5rem;
+    cursor:pointer;
 }
 
 main > section > article > div.lugares > div.blue > div.mayus {
@@ -421,6 +426,7 @@ main > section > article > div.lugares > div.red{
     background-color: #EB7169;
     border-radius: 10px;
     margin-bottom: 0.5rem;
+    cursor:pointer;
 }
 
 main > section > article > div.lugares > div.red > div.mayus {
@@ -467,9 +473,10 @@ main > div.iniciar{
     margin: 1rem;
 }
 
-main > div.iniciar > span{
+main > div.iniciar > a{
     width: 50%;
     height: 100%;
+    text-decoration:none;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -522,6 +529,55 @@ main > div#texto{
     text-align: center;
     padding: 1.5rem;
 }
+
+/*---- Registro ----*/
+main > form.formulario{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main > form.formulario > div.campos > input{
+    width: 40em;
+    height:3em;
+    margin: 5px;
+    border:0px;
+    box-shadow: 0px 1px 7px 0px rgba(0, 141, 19, 0.3)
+}
+
+main > form.formulario > div.campos > input::placeholder{
+    color:#acacac;
+    font-size:1em;
+    padding:20px;
+}
+
+main > form.formulario > div.campos > input:focus{
+    outline:none;
+    background-color:rgba(0, 141, 19, 0.3);
+}
+
+main > form.formulario > div.campos > input:focus::placeholder{
+    color:black;
+}
+
+main > form.formulario > div.boton > button{
+    height: 3em;
+    border:0px;
+    color: white;
+    border-radius:10px;
+    padding:0 2em;
+    margin:3em 0 1em;
+    background-color:#3B9E2D;
+    cursor:pointer;
+}
+
+main > form.formulario > div.no_registro > a{
+    cursor:pointer;
+    font-weight: bold;
+    margin: 2em 0;
+}
+
+
 
 
 /* VERSIÓN TABLET */
