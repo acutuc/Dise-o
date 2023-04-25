@@ -2,14 +2,20 @@
     box-sizing:border-box;
 }
 
+/*
+COOKIES
+
+*/
+
 body{
-    display:flex;
+    display:flex;/**/
     flex-direction: column;
     margin:0;
 } 
 
 /* COOKIES */
 #div-cookies {
+    display:none;
     position: fixed;
     bottom: 50%;
     width: 80%;
@@ -541,6 +547,7 @@ main > form.formulario > div.campos > input{
     width: 40em;
     height:3em;
     margin: 5px;
+    padding-left:2em;
     border:0px;
     box-shadow: 0px 1px 7px 0px rgba(0, 141, 19, 0.3)
 }
@@ -558,6 +565,7 @@ main > form.formulario > div.campos > input:focus{
 
 main > form.formulario > div.campos > input:focus::placeholder{
     color:black;
+    padding-left:-22em;
 }
 
 main > form.formulario > div.boton > button{
@@ -609,6 +617,13 @@ main > form.formulario > div.no_registro > a{
 }
 
 /* VERSIÓN ESCRITORIO */
-@media all and (min-width: 1100) {
-
+@media all and (min-width: 1100px) {
+    /* ---- Body ---- */
+    /*body{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin:0;
+        height: 950px;
+    }*/
 }
