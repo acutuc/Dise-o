@@ -2,14 +2,7 @@
     box-sizing:border-box;
 }
 
-/*
-COOKIES
-
-*/
-
 body{
-    display:flex;/**/
-    flex-direction: column;
     margin:0;
 } 
 
@@ -339,6 +332,7 @@ main > section > article > div.lugares > div.evento{
     border-radius: 10px;
     margin-bottom: 0.5rem;
     cursor:pointer;
+    transition:0.5s all ease;
 }
 
 main > section > article > div.lugares > div.evento > div.mayus {
@@ -369,6 +363,7 @@ main > section > article > div.lugares > div.green{
     border-radius: 10px;
     margin-bottom: 0.5rem;
     cursor:pointer;
+    transition:0.5s all ease;
 }
 
 main > section > article > div.lugares > div.green > div.mayus {
@@ -430,6 +425,7 @@ main > section > article > div.lugares > div.brown{
     border-radius: 10px;
     margin-bottom: 0.5rem;
     cursor:pointer;
+    transition:0.5s all ease;
 }
 
 main > section > article > div.lugares > div.brown > div.mayus {
@@ -461,6 +457,7 @@ main > section > article > div.lugares > div.blue{
     border-radius: 10px;
     margin-bottom: 0.5rem;
     cursor:pointer;
+    transition:0.5s all ease;
 }
 
 main > section > article > div.lugares > div.blue > div.mayus {
@@ -492,6 +489,7 @@ main > section > article > div.lugares > div.red{
     border-radius: 10px;
     margin-bottom: 0.5rem;
     cursor:pointer;
+    transition:0.5s all ease;
 }
 
 main > section > article > div.lugares > div.red > div.mayus {
@@ -642,6 +640,45 @@ main > form.formulario > div.no_registro > a{
     cursor:pointer;
     font-weight: bold;
     margin: 2em 0;
+}
+
+/*SLIDER*/
+.slider-frame {
+	width: 1280px;
+    height: auto;
+	margin:50px auto 0;
+	overflow: hidden;
+}
+
+.slider-frame ul {
+	display: flex;
+	padding: 0;
+	width: 400%;
+	
+	animation: slide 20s infinite alternate ease-in-out;
+}
+
+.slider-frame li {
+	width: 100%;
+	list-style: none;
+}
+
+.slider-frame img {
+	width: 100%;
+}
+
+@keyframes slide {
+	0% {margin-left: 0;}
+	20% {margin-left: 0;}
+	
+	25% {margin-left: -100%;}
+	45% {margin-left: -100%;}
+	
+	50% {margin-left: -200%;}
+	70% {margin-left: -200%;}
+	
+	75% {margin-left: -300%;}
+	100% {margin-left: -300%;}
 }
 
 
