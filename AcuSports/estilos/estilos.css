@@ -156,7 +156,7 @@ main>form {
 
 /*REPRODUCTOR*/
 
-main > video{
+main>video {
     border: .5rem solid black;
     border-radius: 1rem;
     display: flex;
@@ -173,9 +173,9 @@ main>div#info {
     border: .05rem solid #3B9E2D;
     border-radius: .3rem;
     background-color: #3B9E2D;
-  }
+}
 
-  main>div#controles {
+main>div#controles {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
@@ -184,64 +184,64 @@ main>div#info {
     border: .05rem solid #3B9E2D;
     border-radius: .3rem;
     background-color: #3B9E2D;
-  }
+}
 
-  main>div#controles>img {
+main>div#controles>img {
     cursor: pointer;
-  }
+}
 
-  main>div#controles>* {
+main>div#controles>* {
     margin-top: .3rem;
-  }
+}
 
-  main>div#info>input#barraTiempo {
+main>div#info>input#barraTiempo {
     flex: 0 70%;
-  }
+}
 
-  main>div>* {
+main>div>* {
     margin: 0 .5rem;
-  }
+}
 
-  main button {
+main button {
     border: 0;
     background-color: #3B9E2D;
     padding: 0;
     transition: .3s linear;
-  }
+}
 
-  main button.volumen {
+main button.volumen {
     border: .05rem solid #3B9E2D;
     border-radius: 2rem;
     padding: .2rem;
     font-size: 1.5rem;
-  }
+}
 
-  main button:hover {
+main button:hover {
     cursor: pointer;
     transform: scale(1.1, 1.1);
-  }
+}
 
-  input[type=range] {
+input[type=range] {
     -webkit-appearance: none;
-  }
-  
-  input[type=range]::-moz-range-runnable-track {
+}
+
+input[type=range]::-moz-range-runnable-track {
     width: 500px;
     height: 5px;
     background: #3B9E2D;
     border: none;
     border-radius: 3px;
-  }
-  
-  input[type=range]::-webkit-slider-runnable-track {
+}
+
+input[type=range]::-webkit-slider-runnable-track {
     width: 500px;
     height: 5px;
     background: lightblue;
     border: none;
     border-radius: 3px;
-  }
-  
-  input[type=range]::-moz-range-thumb {
+}
+
+input[type=range]::-moz-range-thumb {
     -webkit-appearance: none;
     border: none;
     height: 16px;
@@ -250,9 +250,9 @@ main>div#info {
     background: lightcyan;
     margin-top: -5px;
     transition: .2s linear;
-  }
-  
-  input[type=range]::-webkit-slider-thumb {
+}
+
+input[type=range]::-webkit-slider-thumb {
     -webkit-appearance: none;
     border: none;
     height: 16px;
@@ -261,17 +261,17 @@ main>div#info {
     background: lightcyan;
     margin-top: -5px;
     transition: .2s linear;
-  }
-  
-  input[type=range]::-moz-range-thumb:hover {
+}
+
+input[type=range]::-moz-range-thumb:hover {
     cursor: pointer;
     transform: scale(1.3, 1.3);
-  }
-  
-  input[type=range]::-webkit-slider-thumb:hover {
+}
+
+input[type=range]::-webkit-slider-thumb:hover {
     cursor: pointer;
     transform: scale(1.3, 1.3);
-  }
+}
 
 /*  Cabecera "CIUDADES"  */
 main>div.ciudades {
@@ -722,6 +722,7 @@ main>div.lista>div.par>div.participante {
     align-items: center;
     padding: 1rem 0;
 }
+
 main>div.lista>div.par>div.participante>img {
     width: 60px;
     height: 60px;
@@ -747,7 +748,7 @@ main>div.formulario {
     max-width: 70vw;
 }
 
-main > div.formulario > div.campos{
+main>div.formulario>div.campos {
     max-width: 110vw;
 }
 
@@ -761,7 +762,7 @@ main>div.formulario>div.campos>input {
 }
 
 /*Control de errores en form*/
-main>div.formulario>div.campos > span.usuario {
+main>div.formulario>div.campos>span.usuario {
     color: red;
     font-size: 1rem;
     padding-top: 0.3rem;
@@ -769,7 +770,7 @@ main>div.formulario>div.campos > span.usuario {
     visibility: hidden;
 }
 
-main>div.formulario>div.campos > span.clave {
+main>div.formulario>div.campos>span.clave {
     color: red;
     font-size: 1rem;
     padding-top: 0.3rem;
@@ -777,7 +778,7 @@ main>div.formulario>div.campos > span.clave {
     visibility: hidden;
 }
 
-main>div.formulario>div.campos > span.nombre {
+main>div.formulario>div.campos>span.nombre {
     color: red;
     font-size: 1rem;
     padding-top: 0.3rem;
@@ -785,7 +786,7 @@ main>div.formulario>div.campos > span.nombre {
     visibility: hidden;
 }
 
-main>div.formulario>div.campos > span.apellidos {
+main>div.formulario>div.campos>span.apellidos {
     color: red;
     font-size: 1rem;
     padding-top: 0.3rem;
@@ -793,7 +794,7 @@ main>div.formulario>div.campos > span.apellidos {
     visibility: hidden;
 }
 
-main>div.formulario>div.campos > span.direccion {
+main>div.formulario>div.campos>span.direccion {
     color: red;
     font-size: 1rem;
     padding-top: 0.3rem;
@@ -801,7 +802,7 @@ main>div.formulario>div.campos > span.direccion {
     visibility: hidden;
 }
 
-main>div.formulario>div.campos > span.fecha {
+main>div.formulario>div.campos>span.fecha {
     color: red;
     font-size: 1rem;
     padding-top: 0.3rem;
@@ -809,7 +810,7 @@ main>div.formulario>div.campos > span.fecha {
     visibility: hidden;
 }
 
-main>div.formulario>div.campos > span.email {
+main>div.formulario>div.campos>span.email {
     color: red;
     font-size: 1rem;
     padding-top: 0.3rem;
@@ -850,14 +851,20 @@ main>div.formulario>div.no_registro>a {
     margin: 2em 0;
 }
 
-main.inicio_sesion{
+main.inicio_sesion {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-footer.reg{
-    margin-top:40px;
+footer.reg {
+    margin-top: 40px;
+}
+
+
+/*Ventana CHAT*/
+.kdKNhs {
+    visibility: hidden;
 }
 
 /*SLIDER*/
@@ -971,6 +978,11 @@ div#chat {
         width: 50%;
     }
 
+    /*Ventana CHAT*/
+    .kdKNhs {
+        visibility: visible;
+    }
+
     /*SLIDER*/
     .slider-frame {
         width: 95.5vw;
@@ -1061,7 +1073,7 @@ div#chat {
         align-items: center;
     }
 
-    main > div.formulario > div.campos{
+    main>div.formulario>div.campos {
         max-width: 30vw;
         margin-right: 8em;
     }
@@ -1232,137 +1244,142 @@ div#chat {
 
     /*REPRODUCTOR*/
 
-main > video{
-    border: .5rem solid black;
-    border-radius: 1rem;
-    display: flex;
-    flex: 0 100%;
-    width: 80vw;
-}
+    main>video {
+        border: .5rem solid black;
+        border-radius: 1rem;
+        display: flex;
+        flex: 0 100%;
+        width: 80vw;
+    }
 
-main>div#info {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-around;
-    align-items: center;
-    padding: 1rem 0;
-    border: .05rem solid #3B9E2D;
-    border-radius: .3rem;
-    background-color: #3B9E2D;
-    width: 70vw;
-  }
+    main>div#info {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        align-items: center;
+        padding: 1rem 0;
+        border: .05rem solid #3B9E2D;
+        border-radius: .3rem;
+        background-color: #3B9E2D;
+        width: 70vw;
+    }
 
-  main>div#controles {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    align-items: center;
-    padding: 1rem 0;
-    border: .05rem solid #3B9E2D;
-    border-radius: .3rem;
-    background-color: #3B9E2D;
-  }
+    main>div#controles {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: center;
+        padding: 1rem 0;
+        border: .05rem solid #3B9E2D;
+        border-radius: .3rem;
+        background-color: #3B9E2D;
+    }
 
-  main>div#controles>img {
-    cursor: pointer;
-  }
+    main>div#controles>img {
+        cursor: pointer;
+    }
 
-  main>div#controles>* {
-    margin-top: .3rem;
-  }
+    main>div#controles>* {
+        margin-top: .3rem;
+    }
 
-  main>div#info>input#barraTiempo {
-    flex: 0 70%;
-  }
+    main>div#info>input#barraTiempo {
+        flex: 0 70%;
+    }
 
-  main>div>* {
-    margin: 0 .5rem;
-  }
+    main>div>* {
+        margin: 0 .5rem;
+    }
 
-  main button {
-    border: 0;
-    background-color: #3B9E2D;
-    padding: 0;
-    transition: .3s linear;
-  }
+    main button {
+        border: 0;
+        background-color: #3B9E2D;
+        padding: 0;
+        transition: .3s linear;
+    }
 
-  main button.volumen {
-    border: .05rem solid #3B9E2D;
-    border-radius: 2rem;
-    padding: .2rem;
-    font-size: 1.5rem;
-  }
+    main button.volumen {
+        border: .05rem solid #3B9E2D;
+        border-radius: 2rem;
+        padding: .2rem;
+        font-size: 1.5rem;
+    }
 
-  main button:hover {
-    cursor: pointer;
-    transform: scale(1.1, 1.1);
-  }
+    main button:hover {
+        cursor: pointer;
+        transform: scale(1.1, 1.1);
+    }
 
-  input[type=range] {
-    -webkit-appearance: none;
-  }
-  
-  input[type=range]::-moz-range-runnable-track {
-    width: 500px;
-    height: 5px;
-    background: #3B9E2D;
-    border: none;
-    border-radius: 3px;
-  }
-  
-  input[type=range]::-webkit-slider-runnable-track {
-    width: 500px;
-    height: 5px;
-    background: lightblue;
-    border: none;
-    border-radius: 3px;
-  }
-  
-  input[type=range]::-moz-range-thumb {
-    -webkit-appearance: none;
-    border: none;
-    height: 16px;
-    width: 16px;
-    border-radius: 50%;
-    background: lightcyan;
-    margin-top: -5px;
-    transition: .2s linear;
-  }
-  
-  input[type=range]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    border: none;
-    height: 16px;
-    width: 16px;
-    border-radius: 50%;
-    background: lightcyan;
-    margin-top: -5px;
-    transition: .2s linear;
-  }
-  
-  input[type=range]::-moz-range-thumb:hover {
-    cursor: pointer;
-    transform: scale(1.3, 1.3);
-  }
-  
-  input[type=range]::-webkit-slider-thumb:hover {
-    cursor: pointer;
-    transform: scale(1.3, 1.3);
-  }
+    input[type=range] {
+        -webkit-appearance: none;
+    }
 
-  footer.reg{
-    margin-top:60px;
-}
+    input[type=range]::-moz-range-runnable-track {
+        width: 500px;
+        height: 5px;
+        background: #3B9E2D;
+        border: none;
+        border-radius: 3px;
+    }
 
-  /*---- Registro ----*/
+    input[type=range]::-webkit-slider-runnable-track {
+        width: 500px;
+        height: 5px;
+        background: lightblue;
+        border: none;
+        border-radius: 3px;
+    }
+
+    input[type=range]::-moz-range-thumb {
+        -webkit-appearance: none;
+        border: none;
+        height: 16px;
+        width: 16px;
+        border-radius: 50%;
+        background: lightcyan;
+        margin-top: -5px;
+        transition: .2s linear;
+    }
+
+    input[type=range]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        border: none;
+        height: 16px;
+        width: 16px;
+        border-radius: 50%;
+        background: lightcyan;
+        margin-top: -5px;
+        transition: .2s linear;
+    }
+
+    input[type=range]::-moz-range-thumb:hover {
+        cursor: pointer;
+        transform: scale(1.3, 1.3);
+    }
+
+    input[type=range]::-webkit-slider-thumb:hover {
+        cursor: pointer;
+        transform: scale(1.3, 1.3);
+    }
+
+    footer.reg {
+        margin-top: 60px;
+    }
+
+    /*Ventana CHAT*/
+    .kdKNhs{
+        visibility: visible;
+    }
+
+    /*---- Registro ----*/
     main>div.formulario {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    main > div.formulario > div.campos{
+    main>div.formulario>div.campos {
         max-width: 30vw;
-        margin-left:20em;
+        margin-left: 9em;
     }
 }

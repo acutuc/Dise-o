@@ -302,6 +302,23 @@ $(document).ready(function () {
             })
         }
     })
+
+    //Redimensionar imagen en DEPORTES:
+    $("main > section.imagenes > article.ciudad > picture > a > img").hover(function () {
+        // over
+        $(this).css({
+            "transform": "rotate(0) scale(1.25,1.25)",
+            "box-shadow": "none",
+            "transition": "all 1s ease"
+        })
+    }, function () {
+        $(this).css({
+            "transform": "rotate(0) scale(1,1)",
+            "box-shadow": "none",
+            "transition": "all 1s ease"
+        })
+    }
+    );
 });
 
 /* Cambio de página a participantes.html al pulsar en un evento en concreto*/
