@@ -71,6 +71,10 @@ header > div.icons{
 
   .header-fijo {
     position: fixed;
+	width: 100%;
+	z-index: 999;
+	top:0;
+	left:0;
   }
 
 header > #sidebar {
@@ -94,6 +98,7 @@ header > #sidebar {
     padding: 15px 10px;
     border-bottom: 1px solid rgba(230, 230, 230, 0.3);
     text-align: center;
+    transition: all 0.5s ease;
   }
   
   header > #sidebar > .toggle-btn {
@@ -127,11 +132,18 @@ header > picture > a > img{
 }
 
 header > picture{
-    margin-left:40%;
+    margin-left:39%;
     max-height: 75px;
 }
 
 /* ---- MAIN ---- */
+main{
+    min-height: 70.03vh;
+}
+
+main > form{
+    margin-top:5vh;
+}
 
 /*  Cabecera "CIUDADES"  */
 main > div.ciudades{
@@ -228,6 +240,10 @@ footer div.sub-footer a:hover {
     color: #787575;
 }
 
+footer > div.redes > div.rrss > i{
+    transition: all 0.5s ease;
+}
+
 
 
 /* ---- DEPORTES ---- */
@@ -264,7 +280,7 @@ main > div.subtitulo{
     text-align: center;
     flex-direction: column;
     width: 100%;
-    top:140px;
+    top:100px;
     font-family: 'Rubik', sans-serif;
 }
 
@@ -550,6 +566,7 @@ main > div.iniciar > a{
     font-family: 'Karla', sans-serif;
     justify-content: center;
     cursor: pointer;
+    transition: all 0.5s ease;
 }
 
 main > div.plazas{
@@ -583,7 +600,10 @@ main > div.lista > div.par > div.participante > span.circulo{
     height: 50px;
     background-color: #D9D9D9;
     margin-right: 0.5rem;
+    padding:0.4rem;
+    font-size: 0.9rem;
     border-radius: 50%;
+    transition: all 1s ease;
 }
 
  /*---- Aviso legal ----*/
@@ -644,10 +664,11 @@ main > form.formulario > div.no_registro > a{
 
 /*SLIDER*/
 .slider-frame {
-	width: 1280px;
+	width: 95.5vw;
     height: auto;
 	margin:50px auto 0;
 	overflow: hidden;
+    margin-top:0;
 }
 
 .slider-frame ul {
@@ -681,6 +702,26 @@ main > form.formulario > div.no_registro > a{
 	100% {margin-left: -300%;}
 }
 
+/*Volver arriba*/
+a#go-up{
+	position: fixed;
+	right: 15px;
+	bottom: 15px;
+	display: none;
+}
+a#go-up > i{
+	font-size: 2rem;
+}
+a#go-up > i:hover{
+	cursor:pointer;
+}
+
+div#chat{
+    display: none;
+    z-index:-1;
+}
+
+
 
 
 /* VERSIÓN TABLET */
@@ -709,16 +750,208 @@ main > form.formulario > div.no_registro > a{
         padding:1rem;
         width: 50%;
     }
+
+    /*SLIDER*/
+    .slider-frame {
+        width: 95.5vw;
+        height: auto;
+        margin:50px auto 0;
+        overflow: hidden;
+        margin-top:0;
+    }
+
+    .slider-frame ul {
+        display: flex;
+        padding: 0;
+        width: 400%;
+        
+        animation: slide 20s infinite alternate ease-in-out;
+    }
+
+    .slider-frame li {
+        width: 100%;
+        list-style: none;
+    }
+
+    .slider-frame img {
+        width: 100%;
+    }
+
+    @keyframes slide {
+        0% {margin-left: 0;}
+        20% {margin-left: 0;}
+        
+        25% {margin-left: -100%;}
+        45% {margin-left: -100%;}
+        
+        50% {margin-left: -200%;}
+        70% {margin-left: -200%;}
+        
+        75% {margin-left: -300%;}
+        100% {margin-left: -300%;}
+    }
+
+    main > div.iniciar{
+        display:flex;
+        justify-content: center;
+        height: 38px;
+        margin: 1rem;
+    }
+    
+    main > div.iniciar > a{
+        width: 10rem;
+        height: 100%;
+        text-decoration:none;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #3B9E2D;
+        color: white;
+        border-radius: 10px;
+        border: 1px solid #787575;
+        font-family: 'Karla', sans-serif;
+        justify-content: center;
+        cursor: pointer;
+    }
+
 }
 
 /* VERSIÓN ESCRITORIO */
 @media all and (min-width: 1100px) {
-    /* ---- Body ---- */
-    /*body{
+    /*Header*/
+    header > picture{
+        margin-left:47%;
+        max-height: 75px;
+    }
+
+    /*SLIDER*/
+    .slider-frame {
+        width: 95.5vw;
+        height: auto;
+        margin:50px auto 0;
+        overflow: hidden;
+        margin-top:0;
+    }
+
+    .slider-frame ul {
+        display: flex;
+        padding: 0;
+        width: 400%;
+        
+        animation: slide 20s infinite alternate ease-in-out;
+    }
+
+    .slider-frame li {
+        width: 100%;
+        list-style: none;
+    }
+
+    .slider-frame img {
+        width: 100%;
+    }
+
+    @keyframes slide {
+        0% {margin-left: 0;}
+        20% {margin-left: 0;}
+        
+        25% {margin-left: -100%;}
+        45% {margin-left: -100%;}
+        
+        50% {margin-left: -200%;}
+        70% {margin-left: -200%;}
+        
+        75% {margin-left: -300%;}
+        100% {margin-left: -300%;}
+    }
+
+    main > div.lista{
         display:flex;
         flex-direction: column;
-        justify-content: space-between;
-        margin:0;
-        height: 950px;
-    }*/
+        padding:1rem;
+        font-family: 'Rubik', sans-serif;
+    }
+    
+    main > div.lista > div.par{
+        display:flex;
+        justify-content: space-around;
+        padding: 0 1rem;
+    }
+    
+    main > div.lista > div.par > div.participante{
+        display:flex;
+        align-items: center;
+        padding: 1rem 0;
+    }
+    
+    main > div.lista > div.par > div.participante > span.circulo{
+        width: 50px;
+        height: 50px;
+        background-color: #D9D9D9;
+        margin-right: 0.5rem;
+        border-radius: 50%;
+    }
+
+    main > div.iniciar{
+        display:flex;
+        justify-content: center;
+        height: 38px;
+        margin: 1rem;
+    }
+    
+    main > div.iniciar > a{
+        width: 10rem;
+        height: 100%;
+        text-decoration:none;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #3B9E2D;
+        color: white;
+        border-radius: 10px;
+        border: 1px solid #787575;
+        font-family: 'Karla', sans-serif;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    /*Volver arrba*/
+    a#go-up{
+        position: fixed;
+        right: 35px;
+        bottom: 25px;
+        display: none;
+    }
+    a#go-up > i{
+        font-size: 4rem;
+    }
+    a#go-up > i:hover{
+        cursor:pointer;
+    }
+
+    main > picture > img{
+        width: 80%;
+        height: 80%;
+        margin-left:10%;    
+        position: relative;
+    }
+
+    main > div.subtitulo{
+        position: absolute;
+        display:flex;
+        text-align: center;
+        flex-direction: column;
+        width: 100%;
+        top:140px;
+        font-family: 'Rubik', sans-serif;
+    }
+    
+    main > div.subtitulo > span.neg{
+        font-weight: bold;
+        color: #3B9E2D;
+        height: 30px;
+    }
+    
+    main > div.subtitulo > div.deportessub{
+        color: white;
+    }
 }
