@@ -760,6 +760,63 @@ main>div.formulario>div.campos>input {
     box-shadow: 0px 1px 7px 0px rgba(0, 141, 19, 0.3)
 }
 
+/*Control de errores en form*/
+main>div.formulario>div.campos > span.usuario {
+    color: red;
+    font-size: 1rem;
+    padding-top: 0.3rem;
+    margin-bottom: 0.9rem;
+    visibility: hidden;
+}
+
+main>div.formulario>div.campos > span.clave {
+    color: red;
+    font-size: 1rem;
+    padding-top: 0.3rem;
+    margin-bottom: 0.9rem;
+    visibility: hidden;
+}
+
+main>div.formulario>div.campos > span.nombre {
+    color: red;
+    font-size: 1rem;
+    padding-top: 0.3rem;
+    margin-bottom: 0.9rem;
+    visibility: hidden;
+}
+
+main>div.formulario>div.campos > span.apellidos {
+    color: red;
+    font-size: 1rem;
+    padding-top: 0.3rem;
+    margin-bottom: 0.9rem;
+    visibility: hidden;
+}
+
+main>div.formulario>div.campos > span.direccion {
+    color: red;
+    font-size: 1rem;
+    padding-top: 0.3rem;
+    margin-bottom: 0.9rem;
+    visibility: hidden;
+}
+
+main>div.formulario>div.campos > span.fecha {
+    color: red;
+    font-size: 1rem;
+    padding-top: 0.3rem;
+    margin-bottom: 0.9rem;
+    visibility: hidden;
+}
+
+main>div.formulario>div.campos > span.email {
+    color: red;
+    font-size: 1rem;
+    padding-top: 0.3rem;
+    margin-bottom: 0.9rem;
+    visibility: hidden;
+}
+
 main>div.formulario>div.campos>input::placeholder {
     color: #acacac;
     font-size: 1em;
@@ -997,6 +1054,18 @@ div#chat {
         cursor: pointer;
     }
 
+    /*---- Registro ----*/
+    main>div.formulario {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main > div.formulario > div.campos{
+        max-width: 30vw;
+        margin-right: 8em;
+    }
+
 }
 
 /* VERSIÓN ESCRITORIO */
@@ -1180,6 +1249,7 @@ main>div#info {
     border: .05rem solid #3B9E2D;
     border-radius: .3rem;
     background-color: #3B9E2D;
+    width: 70vw;
   }
 
   main>div#controles {
@@ -1279,4 +1349,20 @@ main>div#info {
     cursor: pointer;
     transform: scale(1.3, 1.3);
   }
+
+  footer.reg{
+    margin-top:60px;
+}
+
+  /*---- Registro ----*/
+    main>div.formulario {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main > div.formulario > div.campos{
+        max-width: 30vw;
+        margin-left:20em;
+    }
 }

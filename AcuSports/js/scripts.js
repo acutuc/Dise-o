@@ -138,7 +138,7 @@ $(document).ready(function () {
         // over
         $(this).css({
             "background-color": "#1f1f1f",
-            "opacity" : "0.5"
+            "opacity": "0.5"
         })
     }, function () {
         // out
@@ -221,6 +221,87 @@ $(document).ready(function () {
             "color": "white"
         })
     })
+
+    //Control de errores en formularios:
+    $("main.inicio_sesion>div.formulario>div.boton > button").click(function (e) {
+        e.preventDefault()
+        //USUARIO
+        if ($("main>div.formulario>div.campos > input#usuario").val().length === 0) {
+            $("main>div.formulario>div.campos > span.usuario").css({
+                "visibility": "visible"
+            })
+        } else {
+            $("main>div.formulario>div.campos > span.usuario").css({
+                "visibility": "hidden"
+            })
+        }
+
+        //CLAVE
+        if ($("main>div.formulario>div.campos > input#clave").val().length === 0) {
+            $("main>div.formulario>div.campos > span.clave").css({
+                "visibility": "visible"
+            })
+        } else {
+            $("main>div.formulario>div.campos > span.clave").css({
+                "visibility": "hidden"
+            })
+        }
+
+        //NOMBRE
+        if ($("main>div.formulario>div.campos > input#nombre").val().length === 0) {
+            $("main>div.formulario>div.campos > span.nombre").css({
+                "visibility": "visible"
+            })
+        } else {
+            $("main>div.formulario>div.campos > span.nombre").css({
+                "visibility": "hidden"
+            })
+        }
+
+        //APELLIDOS
+        if ($("main>div.formulario>div.campos > input#apellidos").val().length === 0) {
+            $("main>div.formulario>div.campos > span.apellidos").css({
+                "visibility": "visible"
+            })
+        } else {
+            $("main>div.formulario>div.campos > span.apellidos").css({
+                "visibility": "hidden"
+            })
+        }
+
+        //DIRECCIÓN
+        if ($("main>div.formulario>div.campos > input#direccion").val().length === 0) {
+            $("main>div.formulario>div.campos > span.direccion").css({
+                "visibility": "visible"
+            })
+        } else {
+            $("main>div.formulario>div.campos > span.direccion").css({
+                "visibility": "hidden"
+            })
+        }
+
+        //FECHA DE NACIMIENTO
+        if ($("main>div.formulario>div.campos > input#fecha").val().length === 0) {
+            $("main>div.formulario>div.campos > span.fecha").css({
+                "visibility": "visible"
+            })
+        } else {
+            $("main>div.formulario>div.campos > span.fecha").css({
+                "visibility": "hidden"
+            })
+        }
+
+        //CORREO ELECTRÓNICO
+        if ($("main>div.formulario>div.campos > input#email").val().length === 0) {
+            $("main>div.formulario>div.campos > span.email").css({
+                "visibility": "visible"
+            })
+        } else {
+            $("main>div.formulario>div.campos > span.email").css({
+                "visibility": "hidden"
+            })
+        }
+    })
 });
 
 /* Cambio de página a participantes.html al pulsar en un evento en concreto*/
@@ -228,11 +309,6 @@ function eventos() {
     document.location.href = "../src/participantes.html";
 }
 
-/* Alert al darle a iniciar sesión*/
-function iniciarSesion(e) {
-    alert("INICIO DE SESIÓN")
-    e.preventDefault()
-}
 
 /* COOKIES */
 function checkacceptCookies() {
@@ -267,129 +343,128 @@ window.onload = function () {
     var retroceder = document.getElementById('saltoAtras');
     var barraTiempo = document.getElementById('barraTiempo');
     var pantalla = document.getElementById('screen');
-  
+
     video.addEventListener('volumechange', function () {
-      volumenVideo = video.volume;
+        volumenVideo = video.volume;
     });
-  
+
     barraTiempo.max = video.duration;
     barraTiempo.value = 0;
     if (video.duration > 60) {
-      tiempoTotal.innerHTML = parseInt(video.duration / 60) + ":" + parseInt(video.duration % 60);
+        tiempoTotal.innerHTML = parseInt(video.duration / 60) + ":" + parseInt(video.duration % 60);
     } else {
-      if(isNaN(video.duration)){
-        tiempoTotal.innerHTML = "0:33";
-      }else{
-        tiempoTotal.innerHTML = "0:" + parseInt(video.duration);
-      }    
+        if (isNaN(video.duration)) {
+            tiempoTotal.innerHTML = "0:33";
+        } else {
+            tiempoTotal.innerHTML = "0:" + parseInt(video.duration);
+        }
     }
-  
+
     video.addEventListener('timeupdate', function () {
-      barraTiempo.value = this.currentTime;
-      var minutos;
-      var segundos;
-      if (video.currentTime >= 60) {
-        minutos = parseInt(video.currentTime / 60);
-        segundos = parseInt(video.currentTime % 60);
-      } else {
-        segundos = parseInt(video.currentTime);
-        minutos = 0;
-      }
-      if ((segundos / 10) >= 1) {
-        tiempoTrans.innerHTML = minutos + ":" + segundos;
-      } else {
-        tiempoTrans.innerHTML = minutos + ":0" + segundos;
-      }
+        barraTiempo.value = this.currentTime;
+        var minutos;
+        var segundos;
+        if (video.currentTime >= 60) {
+            minutos = parseInt(video.currentTime / 60);
+            segundos = parseInt(video.currentTime % 60);
+        } else {
+            segundos = parseInt(video.currentTime);
+            minutos = 0;
+        }
+        if ((segundos / 10) >= 1) {
+            tiempoTrans.innerHTML = minutos + ":" + segundos;
+        } else {
+            tiempoTrans.innerHTML = minutos + ":0" + segundos;
+        }
     });
-  
+
     play.addEventListener('click', function () {
-      if (play.value == '0') {
-        video.play();
-        play.value = '1';
-        play.firstChild.src = "../images/pause.svg";
-      } else {
+        if (play.value == '0') {
+            video.play();
+            play.value = '1';
+            play.firstChild.src = "../images/pause.svg";
+        } else {
+            video.pause();
+            play.value = '0';
+            play.firstChild.src = "../images/play.svg";
+        }
+    })
+
+    stop.addEventListener('click', function () {
         video.pause();
+        video.currentTime = 0;
         play.value = '0';
         play.firstChild.src = "../images/play.svg";
-      }
     })
-  
-    stop.addEventListener('click', function () {
-      video.pause();
-      video.currentTime = 0;
-      play.value = '0';
-      play.firstChild.src = "../images/play.svg";
-    })
-  
+
     restart.addEventListener('click', function () {
-      video.currentTime = 0;
+        video.currentTime = 0;
     });
-  
+
     mute.addEventListener('click', function () {
-      if (video.volume < 0.1) {
-        video.volume = 0.5;
-        document.getElementById('altavoz').src = "../images/altavoz.svg";
-      } else {
-        video.volume = 0;
-        document.getElementById('altavoz').src = "../images/mute.svg";
-      }
+        if (video.volume < 0.1) {
+            video.volume = 0.5;
+            document.getElementById('altavoz').src = "../images/altavoz.svg";
+        } else {
+            video.volume = 0;
+            document.getElementById('altavoz').src = "../images/mute.svg";
+        }
     })
-  
+
     subirVol.addEventListener('click', function () {
-      if (video.volume < 1.0) {
-        video.volume += 0.1;
-      }
-      document.getElementById('altavoz').src = "../images/altavoz.svg";
-      volumenVideo = video.volume;
+        if (video.volume < 1.0) {
+            video.volume += 0.1;
+        }
+        document.getElementById('altavoz').src = "../images/altavoz.svg";
+        volumenVideo = video.volume;
     });
-  
+
     bajarVol.addEventListener('click', function () {
-      if (video.volume > 0.1) {
-        video.volume -= 0.1;
-      } else {
-        document.getElementById('altavoz').src = "../images/mute.svg";
-      }
-      volumenVideo = video.volume;
+        if (video.volume > 0.1) {
+            video.volume -= 0.1;
+        } else {
+            document.getElementById('altavoz').src = "../images/mute.svg";
+        }
+        volumenVideo = video.volume;
     });
-  
+
     masVel.addEventListener('click', function () {
-      if (video.playbackRate < 2) {
-        video.playbackRate += 0.1;
-      }
-      document.getElementById('velocidad').innerHTML = video.playbackRate.toFixed(1);
+        if (video.playbackRate < 2) {
+            video.playbackRate += 0.1;
+        }
+        document.getElementById('velocidad').innerHTML = video.playbackRate.toFixed(1);
     });
-  
+
     menosVel.addEventListener('click', function () {
-      if (video.playbackRate > 0.1) {
-        video.playbackRate -= 0.1;
-      }
-      document.getElementById('velocidad').innerHTML = video.playbackRate.toFixed(1);
+        if (video.playbackRate > 0.1) {
+            video.playbackRate -= 0.1;
+        }
+        document.getElementById('velocidad').innerHTML = video.playbackRate.toFixed(1);
     });
-  
+
     saltar.addEventListener('click', function () {
-      if (video.currentTime < (video.duration - video.duration / 10)) {
-        video.currentTime += parseInt((video.duration / 10));
-      }
+        if (video.currentTime < (video.duration - video.duration / 10)) {
+            video.currentTime += parseInt((video.duration / 10));
+        }
     });
-  
+
     retroceder.addEventListener('click', function () {
-      if (video.currentTime > (video.duration / 10)) {
-        video.currentTime -= parseInt((video.duration / 10));
-      }
+        if (video.currentTime > (video.duration / 10)) {
+            video.currentTime -= parseInt((video.duration / 10));
+        }
     });
-  
+
     barraTiempo.addEventListener('input', function () {
-      video.currentTime = this.value;
-      video.pause();
+        video.currentTime = this.value;
+        video.pause();
     });
-  
+
     barraTiempo.addEventListener('change', function () {
-      video.play();
+        video.play();
     });
-  
+
     pantalla.addEventListener("click", function () {
-      video.requestFullscreen();
+        video.requestFullscreen();
     });
-  
-  };
-  
+
+};
