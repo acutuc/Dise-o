@@ -223,10 +223,9 @@ $(document).ready(function () {
     })
 
     //Control de errores en formularios:
-    $("main.inicio_sesion>div.formulario>div.boton > button").click(function (e) {
-        e.preventDefault()
-        //USUARIO
-        if ($("main>div.formulario>div.campos > input#usuario").val().length === 0) {
+    //USUARIO
+    $("main>div.formulario>div.campos > input#usuario").on("focusout", function () {
+        if ($(this).val().length === 0) {
             $("main>div.formulario>div.campos > span.usuario").css({
                 "visibility": "visible"
             })
@@ -235,9 +234,10 @@ $(document).ready(function () {
                 "visibility": "hidden"
             })
         }
-
-        //CLAVE
-        if ($("main>div.formulario>div.campos > input#clave").val().length === 0) {
+    });
+    //CLAVE
+    $("main>div.formulario>div.campos > input#clave").on("focusout", function () {
+        if ($(this).val().length === 0) {
             $("main>div.formulario>div.campos > span.clave").css({
                 "visibility": "visible"
             })
@@ -246,9 +246,10 @@ $(document).ready(function () {
                 "visibility": "hidden"
             })
         }
-
-        //NOMBRE
-        if ($("main>div.formulario>div.campos > input#nombre").val().length === 0) {
+    });
+    //NOMBRE
+    $("main>div.formulario>div.campos > input#nombre").on("focusout", function () {
+        if ($(this).val().length === 0) {
             $("main>div.formulario>div.campos > span.nombre").css({
                 "visibility": "visible"
             })
@@ -257,9 +258,10 @@ $(document).ready(function () {
                 "visibility": "hidden"
             })
         }
-
-        //APELLIDOS
-        if ($("main>div.formulario>div.campos > input#apellidos").val().length === 0) {
+    });
+    //APELLIDOS
+    $("main>div.formulario>div.campos > input#apellidos").on("focusout", function () {
+        if ($(this).val().length === 0) {
             $("main>div.formulario>div.campos > span.apellidos").css({
                 "visibility": "visible"
             })
@@ -268,9 +270,10 @@ $(document).ready(function () {
                 "visibility": "hidden"
             })
         }
-
-        //DIRECCIÓN
-        if ($("main>div.formulario>div.campos > input#direccion").val().length === 0) {
+    });
+    //DIRECCIÓN
+    $("main>div.formulario>div.campos > input#direccion").on("focusout", function () {
+        if ($(this).val().length === 0) {
             $("main>div.formulario>div.campos > span.direccion").css({
                 "visibility": "visible"
             })
@@ -279,9 +282,10 @@ $(document).ready(function () {
                 "visibility": "hidden"
             })
         }
-
-        //FECHA DE NACIMIENTO
-        if ($("main>div.formulario>div.campos > input#fecha").val().length === 0) {
+    });
+    //FECHA DE NACIMIENTO
+    $("main>div.formulario>div.campos > input#fecha").on("focusout", function () {
+        if ($(this).val().length === 0) {
             $("main>div.formulario>div.campos > span.fecha").css({
                 "visibility": "visible"
             })
@@ -290,9 +294,10 @@ $(document).ready(function () {
                 "visibility": "hidden"
             })
         }
-
-        //CORREO ELECTRÓNICO
-        if ($("main>div.formulario>div.campos > input#email").val().length === 0) {
+    });
+    //CORREO ELECTRÓNICO
+    $("main>div.formulario>div.campos > input#email").on("focusout", function () {
+        if ($(this).val().length === 0) {
             $("main>div.formulario>div.campos > span.email").css({
                 "visibility": "visible"
             })
@@ -301,22 +306,44 @@ $(document).ready(function () {
                 "visibility": "hidden"
             })
         }
-    })
+    });
+
 
     //Redimensionar imagen en DEPORTES:
     $("main > section.imagenes > article.ciudad > picture > a > img").hover(function () {
         // over
         $(this).css({
-            "transform": "rotate(0) scale(1.25,1.25)",
-            "box-shadow": "none",
+            "transform": "rotate(0) scale(0.98,0.98)",
+            "box-shadow": "rgba(0, 0, 0, 0.35) 0px 5px 15px",
             "transition": "all 1s ease"
         })
+        if ($(window).width() < 1100) {
+            $("main>section.imagenes>article.ciudad > span.osc").css({
+                "transform": "rotate(0) scale(0.98,0.98)",
+                "transition": "all 1s ease"
+            })
+        }else{
+            $("main>section.imagenes>article.ciudad > span.osc").css({
+                "transform": "rotate(0) scale(0.98,0.98)",
+            })
+        }
     }, function () {
         $(this).css({
             "transform": "rotate(0) scale(1,1)",
             "box-shadow": "none",
             "transition": "all 1s ease"
         })
+        if ($(window).width() < 1100) {
+            $("main>section.imagenes>article.ciudad > span.osc").css({
+                "transform": "rotate(0) scale(1,1)",
+                "transition": "all 1s ease"
+            })
+        }else{
+            $("main>section.imagenes>article.ciudad > span.osc").css({
+                "transform": "rotate(0) scale(1,1)",
+            })
+        }
+
     }
     );
 });
@@ -330,7 +357,7 @@ function eventos() {
 /* COOKIES */
 function checkacceptCookies() {
     if (localStorage.acceptCookies == 'true') {
-        $('#div-cookies').show(); // <---------------------------------- Quitar esta línea. La dejo para que María José vea las cookies.
+        $('#div-cookies').hide(); // 
     } else {
         $('#div-cookies').show();
     }

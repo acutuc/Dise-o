@@ -18,7 +18,7 @@
 
 <body>
     <header>
-        <div id="sidebar">
+        <div id="sidebar" class="desactivado">
             <div class="toggle-btn">
                 <span>&#9776</span>
             </div>
@@ -26,14 +26,33 @@
                 <a href="../index.html">
                     <li>CIUDADES</li>
                 </a>
-                <a href="src/quienes_somos.html">
+                <a href="../src/futbol7.html">
+                    <li>FÚTBOL 7</li>
+                </a>
+                <a href="../src/futbol7.html">
+                    <li>FÚTBOL 11</li>
+                </a>
+                <a href="../src/baloncesto.html">
+                    <li>BALONCESTO</li>
+                </a>
+                <a href="../src/tenis.html">
+                    <li>TENIS</li>
+                </a>
+                <a href="../src/padel.html">
+                    <li>PÁDEL</li>
+                </a>
+                <a href="../src/quienes_somos.html">
                     <li>¿QUIÉNES SOMOS?</li>
                 </a>
+                
             </ul>
         </div>
         <picture>
             <a href="../index.html"><img src="../images/Acusports.png" alt="logo"></a>
         </picture>
+        <div class="icons">
+            <a href="../src/iniciar_sesion.html"><i class="fas fa-user" aria-hidden="true"></i></a>
+        </div>
     </header>
 
     <main class="inicio_sesion">
@@ -44,12 +63,12 @@
             <div class="campos">
                 <input type="text" placeholder="Usuario" id="usuario">
                 <br>
-                <span class="usuario">Tienes que insertar un nombre de usuario</span>
+                <span class="usuario">Introduzca su usuario</span>
             </div>
             <div class="campos">
                 <input type="password" placeholder="Contraseña" id="clave">
                 <br>
-                <span class="clave">Tienes que introducir una contraseña</span>
+                <span class="clave">Introduzca su contraseña</span>
             </div>
             <div class="boton">
                 <button type="submit">INICIAR SESIÓN</button>
@@ -60,45 +79,7 @@
             
         </div>
         
-        <video id="reproductor" poster="../videos/trailer.png">
-            <source src="../videos/videos/trailer.mp4" type="video/mp4" />
-            <source src="../videos/videos/trailer.ogv" type='video/ogg; codecs="theora,vorbis"' />
-            <source src="../videos/videos/trailer.webm" type='video/webm; codecs="vp8,vorbis"' />
-            <object>
-                <embed src="../videos/videos/trailer.swf" type="application/x-shockwave-flash" allowfullscreen="false"
-                    alloscriptaccess="always" />
-            </object>
-
-        </video>
-
-        <div id="info">
-            <div id="tiempo">
-                <label id="trans">00:00</label>
-                /
-                <label id="total"></label>
-            </div>
-            <input type="range" id='barraTiempo' min="0" step="any">
-            <button id="screen">
-                <img src="../images/full-size.svg" width="30px" />
-            </button>
-        </div>
-
-        <div id="controles">
-            <button id="play" value="0"><img src="../images/play.svg" width="30px" /></button>
-            <button id="stop"><img src="../images/stop.svg" width="30px" /></button>
-            <button id="restart"><img src="../images/restart.svg" width="30px" /></button>
-            <img src="../images/volume-down.svg" id="bajarVol" width="30px" alt="bajarVol">
-            <div>
-                <img id="altavoz" width="30px" height="30px" src="../images/altavoz.svg" />
-            </div>
-            <img src="../images/volume-up.svg" id="subirVol" width="30px" alt="subirVol">
-            <button id="mute"><img src="../images/mute.svg" width="30px" /></button>
-            <button id="disminuirVel"><img src="../images/backward.svg" width="30px" /></button>
-            <label id="velocidad">1.0</label>
-            <button id="aumentarVel"><img src="../images/forward.svg" width="30px" /></button>
-            <button id="saltoAtras"><img src="../images/back.svg" width="30px" /></button>
-            <button id="saltoAdelante"><img src="../images/next.svg" width="30px" /></button>
-        </div>
+        
     </main>
 
     <a id="go-up" href=""><i class="fas fa-arrow-circle-up" style="color: #226d2a;"></i></a>
